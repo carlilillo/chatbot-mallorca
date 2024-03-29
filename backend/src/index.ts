@@ -1,6 +1,12 @@
 import express, { Request, Response } from 'express';
-const {WebhookClient} = require('dialogflow-fulfillment');
-const {Card, Suggestion} = require('dialogflow-fulfillment');
+import dotenv from 'dotenv';
+import dialogflow from '@google-cloud/dialogflow';
+import { randomUUID } from 'crypto';
+
+dotenv.config();
+
+const sessionClient = new dialogflow.SessionsClient({ apiEndpoint: process.env.API_ENDPOINT });
+const sessionId = randomUUID();
 
 const app = express();
 
@@ -10,30 +16,36 @@ app.get('/', (_: Request, res: Response) => {
     res.send('esto es correcto\n');
 });
 
-app.post('/webhook', ((req: Request, res: Response) => {
-    const agent = new WebhookClient({ request: req, response:res });
-    console.log('Dialogflow Request headers: ' + JSON.stringify(req.headers));
-    console.log('Dialogflow Request body: ' + JSON.stringify(req.body));
-   
-    function welcome(agent: any) {
-      agent.add(`Welcome to my agent!`);
-    }
-   
-    function fallback(agent: any) {
-      agent.add(`I didn't understand`);
-      agent.add(`I'm sorry, can you try again?`);
-    }
+app.get('/example', async (req: Request, res: Response) => {
 
-    const test = (agent: any) => {
-        agent.add('testing approved');
-    }
+	try {
+		const sessionPath = sessionClient.projectLocationAgentSessionPath(
+			process.env.DIALOG_FLOW_PROJECTID!,
+			process.env.API_LOCATION!,
+			sessionId
+		);
 
-    let intentMap = new Map();
-    intentMap.set('Default Welcome Intent', welcome);
-    intentMap.set('Default Fallback Intent', fallback);
-    intentMap.set('Test', test);
-    agent.handleRequest(intentMap);
-}));
+		const request = {
+			session: sessionPath,
+			queryInput: {
+			  text: {
+				text: 'send a response',
+				languageCode: 'en',
+			  },
+			},
+		};
+	
+		const response = await sessionClient.detectIntent(request);
+		
+		console.log(response);
+
+		res.send('aceptado');
+	}catch (error) {
+		res.statusCode = 500;
+		console.error(error);
+		res.send('lasdjkflasdjf')
+	}
+});
 
 app.listen(3000, () => {
     console.log('server connected');
