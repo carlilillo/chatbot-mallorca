@@ -29,15 +29,22 @@ app.get('/example', async (req: Request, res: Response) => {
 			session: sessionPath,
 			queryInput: {
 			  text: {
-				text: 'send a response',
+				text: 'username',
 				languageCode: 'en',
 			  },
 			},
 		};
 	
 		const response = await sessionClient.detectIntent(request);
-		
-		console.log(response);
+
+		console.log('parameters: ')
+		console.log(response[0].queryResult?.parameters);
+		console.log('fulfillment text')
+		console.log(response[0].queryResult?.fulfillmentText);
+		console.log('outputContexts')
+		console.log(response[0].queryResult?.outputContexts);
+		console.log('intent')
+		console.log(response[0].queryResult?.intent);
 
 		res.send('aceptado');
 	}catch (error) {
