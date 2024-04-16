@@ -1,5 +1,5 @@
 .venv/
 *.env
-backend/node_modules/
+node_modules/
 backend/google_credentials.json
 *__pycache__
