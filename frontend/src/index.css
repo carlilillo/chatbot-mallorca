@@ -128,4 +128,16 @@ header{
   top: 0;
   width: 40%;
   padding-top: 1.4em;
+  align-items: center;
+}
+
+
+header select {
+  width: 40%;
+  outline: none;
+  border: 1px solid gray;
+  background-color: #1a1a1a;
+  height: 3em;
+  border-radius: 10px;
+  text-align: center;
 }

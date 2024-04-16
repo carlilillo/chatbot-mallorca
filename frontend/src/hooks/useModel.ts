@@ -1,9 +1,10 @@
 import { FormEvent, useRef, useState } from "react"
+import getData from "../services/dialogflow"
 
 
 
 export default function useModel(models: model[]) {
-  const [model, setModel] = useState(models[0].htmlText)
+  const [model, setModel] = useState<model>(models[0])
   const [messages, setMessages] = useState<message[]>([])
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -20,13 +21,15 @@ export default function useModel(models: model[]) {
       input
     })
 
+    await getData(input, model!.value)
+
     inputRef.current!.value = ''
     setMessages(messageClone)
   }
 
   const onclick = (event: React.MouseEvent<HTMLSelectElement, MouseEvent>) => {
     const htmlText = models.find(model => model.value === event.currentTarget.value)
-    setModel(htmlText?.htmlText || '')
+    setModel(htmlText!)
   }
 
 

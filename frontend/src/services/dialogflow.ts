@@ -3,7 +3,7 @@
 export default async function getData(input: string, model: string) {
 
 
-    const res = await fetch('localhost:3000/api/dialogflow' ,
+    const res = await fetch('http://localhost:3000/api/dialogflow' ,
     {
         method: 'POST',
         headers: {
@@ -18,5 +18,4 @@ export default async function getData(input: string, model: string) {
     const json = await res.json()
 
     console.log(json)
-
 }

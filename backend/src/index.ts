@@ -1,58 +1,31 @@
-import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
-import dialogflow from '@google-cloud/dialogflow';
-import { randomUUID } from 'crypto';
-
 dotenv.config();
-
-const sessionClient = new dialogflow.SessionsClient({ apiEndpoint: process.env.API_ENDPOINT });
-const sessionId = randomUUID();
+import express, { Request, Response } from 'express';
+import cors from 'cors';
+import getIntent from './services/dialogflow';
 
 const app = express();
 
 app.use(express.json());
+app.use(cors({
+	origin: 'http://localhost:5173',
+}))
 
-app.get('/', (_: Request, res: Response) => {
-    res.send('esto es correcto\n');
-});
 
-app.get('/example', async (req: Request, res: Response) => {
-
+app.post('/api/dialogflow', (req: Request, res: Response) => {
 	try {
-		const sessionPath = sessionClient.projectLocationAgentSessionPath(
-			process.env.DIALOG_FLOW_PROJECTID!,
-			process.env.API_LOCATION!,
-			sessionId
-		);
+		const body = req.body
+		const model = body.model
 
-		const request = {
-			session: sessionPath,
-			queryInput: {
-			  text: {
-				text: 'username',
-				languageCode: 'en',
-			  },
-			},
-		};
-	
-		const response = await sessionClient.detectIntent(request);
+		getIntent(body.input)
 
-		console.log('parameters: ')
-		console.log(response[0].queryResult?.parameters);
-		console.log('fulfillment text')
-		console.log(response[0].queryResult?.fulfillmentText);
-		console.log('outputContexts')
-		console.log(response[0].queryResult?.outputContexts);
-		console.log('intent')
-		console.log(response[0].queryResult?.intent);
-
-		res.send('aceptado');
-	}catch (error) {
-		res.statusCode = 500;
-		console.error(error);
-		res.send('lasdjkflasdjf')
+		res.json('send')
+	} catch (error) {
+		console.error(error)
+		res.statusCode = 500
+		res.json('server error')
 	}
-});
+})
 
 app.listen(3000, () => {
     console.log('server connected');

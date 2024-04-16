@@ -24,7 +24,6 @@ function App() {
     <>
       <header>
         <select
-          style={{outline: "none"}}
           onClick={onclick}>
 
             {models.map(model => 
@@ -38,8 +37,8 @@ function App() {
 
         </select>
 
-        <h1 style={{textAlign: "center"}}>
-          Usando {model}
+        <h1 style={{textAlign: "center", marginTop: "0.3em"}}>
+          Usando {model?.htmlText}
         </h1>
       </header>
 
