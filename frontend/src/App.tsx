@@ -1,3 +1,5 @@
+import useConversation from "./hooks/useConversations"
+import useInput from "./hooks/useInput"
 import useModel from "./hooks/useModel"
 
 const models: model[] = [
@@ -14,12 +16,19 @@ const models: model[] = [
 ]
 
 function App() {
-  const { inputRef,
-          onsubmit,
-          onclick,
-          model, 
-          messages } = useModel(models)
+  const {
+    model,
+    onclick
+  } = useModel(models)
 
+  const {
+    userMessages, 
+    botMessages, 
+    setNewUserMessage } = useConversation(model)
+
+  const { inputRef, onSubmit } = useInput(setNewUserMessage)
+
+  
   return (
     <>
       <header>
@@ -46,17 +55,27 @@ function App() {
         <div className="chat">
           <div>
 
-            {messages.map(message => {
-                return(
-                    <div 
-                      key={message.id}>
-                        <span>
-                          {message.isUser ? 'Tú' : 'Bot'}
-                        </span>
-                        <p>
-                          {message.input}
-                        </p>
-                    </div>
+            {
+              botMessages.map( (botMessage, index) => {
+                  const userMessage = userMessages[index]
+                  return (
+                    userMessage
+                      ? <div key={botMessage.id}>
+                          <div>
+                              <span>Bot</span>
+                              <p>{botMessage.input}</p>
+                          </div>
+                          
+                          <div>
+                              <span>Tú</span>
+                              <p>{userMessage.input}</p>
+                          </div>
+                        </div>
+                      : <div
+                          key={botMessage.id}>
+                            <span>Bot</span>
+                            <p>{botMessage.input}</p>
+                        </div>
                   )
                 }
               )
@@ -65,7 +84,7 @@ function App() {
           </div>
         </div>
 
-        <form onSubmit={onsubmit}>
+        <form onSubmit={onSubmit}>
           <input
             ref={inputRef}
             placeholder="Cuéntame qué hizo el Mallorca..."

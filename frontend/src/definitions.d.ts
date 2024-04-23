@@ -2,8 +2,7 @@
 
 
 type message = {
-    id: number,
-    isUser:boolean,
+    id?: number,
     input: string
 }
 
