@@ -1,21 +1,24 @@
 
 
-export default async function getData(input: string, model: string) {
+export default async function getData(
+    input: string, 
+    model: string
+) {
 
 
-    const res = await fetch('http://localhost:3000/api/dialogflow' ,
+    const res = await fetch(`http://localhost:3000/api/dialogflow` ,
     {
         method: 'POST',
         headers: {
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
         },
-        body: JSON.stringify({
-            input,
-            model
-        })
+        credentials: 'include',
+
+        body: JSON.stringify({ input, model })
     })
 
     const json = await res.json()
 
-    console.log(json)
+    return json
+
 }

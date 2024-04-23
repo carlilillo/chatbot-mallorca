@@ -48,15 +48,16 @@ function App() {
 
             {messages.map(message => {
                 return(
-                  <div 
-                    key={message.id}>
-                      <span>
-                        {message.isUser ? 'Tú' : 'Bot'}
-                      </span>
-                      <p>
-                        {message.input}
-                      </p>
-                  </div>)
+                    <div 
+                      key={message.id}>
+                        <span>
+                          {message.isUser ? 'Tú' : 'Bot'}
+                        </span>
+                        <p>
+                          {message.input}
+                        </p>
+                    </div>
+                  )
                 }
               )
             }

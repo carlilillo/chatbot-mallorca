@@ -21,14 +21,17 @@ export default function useModel(models: model[]) {
       input
     })
 
-    await getData(input, model!.value)
+    getData(input, model!.value).then( (response) => {
+      console.log(response)
+    })
 
     inputRef.current!.value = ''
     setMessages(messageClone)
   }
 
   const onclick = (event: React.MouseEvent<HTMLSelectElement, MouseEvent>) => {
-    const htmlText = models.find(model => model.value === event.currentTarget.value)
+    const htmlText = models
+      .find(model => model.value === event.currentTarget.value)
     setModel(htmlText!)
   }
 

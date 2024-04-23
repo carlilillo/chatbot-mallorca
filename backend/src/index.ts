@@ -1,31 +1,22 @@
 import dotenv from 'dotenv';
 dotenv.config();
-import express, { Request, Response } from 'express';
+
+import express from 'express';
 import cors from 'cors';
-import getIntent from './services/dialogflow';
+import setupEndpoints from './endpoints/setupEndpoints';
+const cookieParser = require('cookie-parser')
 
-const app = express();
+const app = express()
 
-app.use(express.json());
+app.use(express.json())
+app.use(cookieParser())
 app.use(cors({
 	origin: 'http://localhost:5173',
+    allowedHeaders: ['Content-Type'],
+    credentials: true,
 }))
 
-
-app.post('/api/dialogflow', (req: Request, res: Response) => {
-	try {
-		const body = req.body
-		const model = body.model
-
-		getIntent(body.input)
-
-		res.json('send')
-	} catch (error) {
-		console.error(error)
-		res.statusCode = 500
-		res.json('server error')
-	}
-})
+setupEndpoints(app)
 
 app.listen(3000, () => {
     console.log('server connected');
