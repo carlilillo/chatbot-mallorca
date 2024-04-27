@@ -52,8 +52,7 @@ function App() {
       </header>
 
       <main>
-        <div className="chat">
-          <div>
+        <article className="chat">
 
             {
               botMessages.map( (botMessage, index) => {
@@ -61,15 +60,11 @@ function App() {
                   return (
                     userMessage
                       ? <div key={botMessage.id}>
-                          <div>
-                              <span>Bot</span>
-                              <p>{botMessage.input}</p>
-                          </div>
-                          
-                          <div>
-                              <span>Tú</span>
-                              <p>{userMessage.input}</p>
-                          </div>
+                            <span>Bot</span>
+                            <p>{botMessage.input}</p>
+                        
+                            <span>Tú</span>
+                            <p>{userMessage.input}</p>
                         </div>
                       : <div
                           key={botMessage.id}>
@@ -81,8 +76,8 @@ function App() {
               )
             }
 
-          </div>
-        </div>
+        </article>
+
 
         <form onSubmit={onSubmit}>
           <input
@@ -91,6 +86,8 @@ function App() {
           />
           <button>Enviar</button>
         </form>
+
+        <button className="auto-scroll hiding">↓</button>
 
       </main>
       

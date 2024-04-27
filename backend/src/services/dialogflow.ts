@@ -8,24 +8,49 @@ const sessionClient =
   )
 
 
-export default async function getIntent(message: string, sessionId: string) {
-    const sessionPath = sessionClient.projectLocationAgentSessionPath(
-        process.env.DIALOG_FLOW_PROJECTID!,
-        process.env.API_LOCATION!,
-        sessionId
+export async function getIntent(message: string, sessionId: string) {
+  // request intent from dialogflow
+  const sessionPath = sessionClient.projectLocationAgentSessionPath(
+      process.env.DIALOG_FLOW_PROJECTID!,
+      process.env.API_LOCATION!,
+      sessionId
+  )
+
+  const request = {
+    session: sessionPath,
+    queryInput: {
+      text: {
+        text: message,
+        languageCode: 'es',
+      },
+    },
+  }
+
+  const response = await sessionClient.detectIntent(request)
+
+  return { response }
+}
+
+export async function deleteContext(sessionId: string, context: string) {
+
+  const sessionContext = new dialogflow.ContextsClient(
+    {
+      apiEndpoint: process.env.API_ENDPOINT
+    }
+  )
+
+  const name = sessionContext
+    .projectLocationAgentEnvironmentUserSessionContextPath(
+      process.env.DIALOG_FLOW_PROJECTID!,
+      process.env.API_LOCATION!,
+      'draft',
+      '-',
+      sessionId,
+      context
     )
 
-    const request = {
-        session: sessionPath,
-        queryInput: {
-          text: {
-            text: message,
-            languageCode: 'en',
-          },
-        },
-    }
+  const res = await sessionContext.deleteContext({ name })
 
-    const response = await sessionClient.detectIntent(request)
-
-    return { response }
+  console.log(res)
+  
 }
