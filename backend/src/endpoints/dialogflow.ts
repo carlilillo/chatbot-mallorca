@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { deleteContext, getIntent } from "../services/dialogflow";
 import { randomUUID } from "crypto";
+import { routeActionFromIntent, requestIntent, setAction } from "../services/dialogflow";
 
 export async function dialogFlowGetIntent(req: Request, res: Response) {
 	const getCurrentSession = (req: Request, res: Response) => {
@@ -21,36 +21,6 @@ export async function dialogFlowGetIntent(req: Request, res: Response) {
 		return { sessionId }
 	}
 
-	const filterIntentFromDialogflow = async (sessionId: string, input: string) => {
-		const { response } = await getIntent(input, sessionId)
-		const firstResponse = response[0]
-
-		const intentName = firstResponse.queryResult?.intent?.displayName
-		if (intentName?.startsWith("Laliga")) {
-			// it is laliga dialogflow or derivative
-
-			if (intentName === "Laliga") {
-				const laligaParam = firstResponse.queryResult?.parameters?.fields!["La-liga"]["stringValue"]
-				if (!laligaParam) {
-					res.json({
-						parameteresRequired: false,
-						fulfillmentText: firstResponse.queryResult?.fulfillmentText,
-						allResponse: firstResponse
-					})
-					return
-				}
-			}
-
-			await deleteContext(sessionId, 'Laligaglobal-followup')
-		}
-
-		res.json({
-			parameteresRequired: true,
-			fulfillmentText: firstResponse.queryResult?.fulfillmentText,
-			allResponse: firstResponse
-		})
-	}
-
     try {
 		const body = req.body
 		const model = body.model
@@ -58,8 +28,18 @@ export async function dialogFlowGetIntent(req: Request, res: Response) {
 		
 		const { sessionId } = getCurrentSession(req, res)
 		
-		await filterIntentFromDialogflow(sessionId, input)
+		
+		const { intentResponse } = await requestIntent(input, sessionId)
 
+		const intentName = intentResponse.queryResult?.intent?.displayName!
+  		const paramsFields = intentResponse.queryResult?.parameters?.fields!
+  		const text = intentResponse.queryResult?.fulfillmentText!
+		
+		const { intentAction } = await routeActionFromIntent(
+			intentName,  paramsFields, sessionId
+		)
+
+		setAction(res, intentAction, text, model)
 		res.end()
 	} catch (error) {
 		console.error(error)

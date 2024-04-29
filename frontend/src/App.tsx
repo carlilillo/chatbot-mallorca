@@ -28,13 +28,33 @@ function App() {
 
   const { inputRef, onSubmit } = useInput(setNewUserMessage)
 
-  
+  const messages = botMessages.map( (botMessage, index) => {
+      const userMessage = userMessages[index]
+      return (
+        userMessage
+          ? <div key={botMessage.id}>
+                <p><span>Bot</span><br />
+                  {botMessage.input}
+                </p>
+                <p><span>Tú</span><br />
+                  {userMessage.input}
+                </p>
+            </div>
+          : <div
+              key={botMessage.id}>
+                <p><span>Bot</span><br />
+                  {botMessage.input}
+                </p>
+            </div>
+      )
+    }
+  )
+
   return (
     <>
       <header>
         <select
           onClick={onclick}>
-
             {models.map(model => 
               <option 
                 key={model.id} 
@@ -46,37 +66,17 @@ function App() {
 
         </select>
 
-        <h1 style={{textAlign: "center", marginTop: "0.3em"}}>
+        <h1 style={{textAlign: "center", margin: "0.3em 0 0 0"}}>
           Usando {model?.htmlText}
         </h1>
       </header>
 
       <main>
-        <article className="chat">
-
-            {
-              botMessages.map( (botMessage, index) => {
-                  const userMessage = userMessages[index]
-                  return (
-                    userMessage
-                      ? <div key={botMessage.id}>
-                            <span>Bot</span>
-                            <p>{botMessage.input}</p>
-                        
-                            <span>Tú</span>
-                            <p>{userMessage.input}</p>
-                        </div>
-                      : <div
-                          key={botMessage.id}>
-                            <span>Bot</span>
-                            <p>{botMessage.input}</p>
-                        </div>
-                  )
-                }
-              )
-            }
-
-        </article>
+        <section className="chat">
+          <div>
+            {messages}
+          </div>
+        </section>
 
 
         <form onSubmit={onSubmit}>

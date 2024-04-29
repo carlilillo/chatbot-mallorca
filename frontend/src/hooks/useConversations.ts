@@ -18,12 +18,12 @@ export default function useConversation(model: model) {
     
         const userInput = userMessages[userMessages.length - 1]
         getData(userInput.input, model.value).then( (response: any) => {
-    
-          console.log(response)
+          if (response.error) console.log(response.error)
+
           const botMessagesClone = botMessages.slice()
           botMessagesClone.push({
             id: botMessages.length,
-            input: response.fulfillmentText
+            input: response.response
           })
           setbotMessages(botMessagesClone)
     

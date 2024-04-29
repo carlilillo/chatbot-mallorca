@@ -116,6 +116,7 @@ main {
   display: flex;
   height: 75%;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .chat div {
@@ -130,7 +131,7 @@ header{
   width: 40%;
   padding-top: 1.4em;
   align-items: center;
-  height: 25%;
+  
 }
 
 
