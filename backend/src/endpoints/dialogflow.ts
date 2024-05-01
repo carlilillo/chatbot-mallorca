@@ -34,12 +34,13 @@ export async function dialogFlowGetIntent(req: Request, res: Response) {
 		const intentName = intentResponse.queryResult?.intent?.displayName!
   		const paramsFields = intentResponse.queryResult?.parameters?.fields!
   		const text = intentResponse.queryResult?.fulfillmentText!
+		const query = intentResponse.queryResult?.queryText!
 		
 		const { intentAction } = await routeActionFromIntent(
 			intentName,  paramsFields, sessionId
 		)
 
-		setAction(res, intentAction, text, model)
+		await setAction({ res, intentAction, text, model, query })
 		res.end()
 	} catch (error) {
 		console.error(error)

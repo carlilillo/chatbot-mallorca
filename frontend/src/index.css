@@ -119,8 +119,16 @@ main {
   overflow-y: auto;
 }
 
-.chat div {
+.chat > div {
   overflow-y: auto;
+  height: 100%;
+}
+
+.dialog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 header{
@@ -150,7 +158,7 @@ header select {
   position: absolute;
   border-radius: 5em;
   padding: 0.3em 0.7em;
-  left: 48%;
+  left: 47.5%;
   top: 85%;
 }
 

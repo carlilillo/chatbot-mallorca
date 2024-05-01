@@ -1,6 +1,6 @@
 import dialogflow from '@google-cloud/dialogflow';
-import { Response } from 'express';
-import { intentNames, action } from './definitions';
+import { intentNames, action, actionParams } from './definitions';
+import getModelRetrieval from './ragApi';
 
 const sessionClient = 
   new dialogflow.SessionsClient(
@@ -63,8 +63,14 @@ export async function routeActionFromIntent(
 ): Promise<{intentAction: action}>  {
 
 
-  const ragIntentsFilter = async (param: string, context: string) => {
-    if (intentName === intentNames.laliga) {
+  const ragIntentsFilter = 
+  async (param: string, 
+    context: string, 
+    intentNameToFilter: string, 
+    negativeIntentName: string, 
+    requestAction:action) => {
+
+    if (intentName === intentNameToFilter) {
       const hadParam = paramsFields[param]["stringValue"]
       if (!hadParam) {
         return {
@@ -74,29 +80,45 @@ export async function routeActionFromIntent(
       await deleteContext(sessionId, context)
     }
 
-    if (intentName === intentNames.laligaNo) {
+    if (intentName === negativeIntentName) {
       return {
         intentAction: action.SendIntentResponse,
       }
     }
 
     return {
-      intentAction: action.LaLigaRequest
+      intentAction: requestAction
     }
   }
 
   if (intentName?.startsWith(intentNames.laliga)) {
-    // it is laliga dialogflow or derivative
-    const { intentAction } = await ragIntentsFilter("La-liga", "Laligaglobal-followup")
+    // it is laliga dialogflow or derivative intent
+    const { intentAction } = await ragIntentsFilter(
+      "La-liga", 
+      "Laligaglobal-followup", 
+      intentNames.laliga, 
+      intentNames.laligaNo, 
+      action.LaLigaRequest
+    )
+
     return { intentAction }
 
   } else if (intentName?.startsWith(intentNames.copaDelRey)) {
-    const { intentAction } = await ragIntentsFilter("Copa-del-Rey", "CopadelRey-followup")
+    // it is copa del rey dialogflow or derivative intent
+    const { intentAction } = await ragIntentsFilter(
+      "Copa-del-Rey", 
+      "CopadelRey-followup", 
+      intentNames.copaDelRey, 
+      intentNames.copaDelReyNo, 
+      action.CopaDelReyRequest
+    )
+
     return { intentAction }
 
   } else if (intentName === intentNames.welcome
       || intentName === intentNames.error) {
     return {
+      // dialogflow default intents
       intentAction: action.SendIntentResponse
     }
   }
@@ -104,18 +126,33 @@ export async function routeActionFromIntent(
   return { intentAction: action.unknown }
 }
 
+export async function setAction(
+  { res, 
+    intentAction, 
+    text, 
+    model, 
+    query }: actionParams) {
 
-export function setAction(res: Response, intentAction: action, text: string, model: string) {
   if (intentAction === action.SendIntentResponse) {
+
     res.json({response: text})
+
   } else if (intentAction === action.LaLigaRequest) {
-    res.json({response: "Esta sentencia es de la liga"})
+
+    const resultMessage = await getModelRetrieval(model, 'la-liga', query)
+    res.json({response: resultMessage})
+
   } else if (intentAction === action.CopaDelReyRequest) {
-    res.json({response: "Esta sentencia es de la copa del rey"})
+
+    const resultMessage = await getModelRetrieval(model, 'copa-del-rey', query)
+    res.json({response: resultMessage})
+
   } else if (intentAction === action.unknown) {
+
     res.json({
       error: "intent not matched",
       response: "Vuelve a escribir una nueva frase"
     })
+
   }
 }

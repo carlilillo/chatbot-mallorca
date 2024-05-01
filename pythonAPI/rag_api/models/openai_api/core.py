@@ -1,43 +1,21 @@
 from openai import OpenAI
-import os
+from ...RAG_files.query_template import get_query
 
 client = OpenAI()
 
-def create_message(message: str, thread_id: str):
-    message = client.beta.threads.messages.create(
-        thread_id=thread_id,
-        role="user",
-        content=message
+def fetchResponse(query: str):
+    response = client.chat.completions.create(
+        messages=[
+            {'role': 'user', 'content': query},
+        ],
+        model='gpt-3.5-turbo'
     )
-    
-    return message
+    return response.choices[0].message.content
 
-def run_config(assistant_id: str | None, thread_id: str):
-    run = client.beta.threads.runs.create_and_poll(
-        thread_id=thread_id,
-        assistant_id=assistant_id,
-        instructions='Si en los documentos no aparece, responde que desconoces la información'
-    )
-    
-    return run
+def rag_message_copadelrey(message: str):
+    query = get_query(obj='copa-del-rey', message=message)
+    return fetchResponse(query)
 
-
-def copa_del_rey(message: str):
-    
-    thread = client.beta.threads.create()
-    
-    message = create_message(message, thread.id)
-    
-    run = run_config(
-        os.getenv('COPA_DEL_REY_ASSISTANT'), 
-        thread.id
-    )
-    
-    if run.status == 'completed':
-        messages = client.beta.threads.messages.list(
-            thread_id=thread.id
-        )
-        return messages
-    
-
-    return run.status
+def rag_message_laliga(message: str):
+    query = get_query(obj='laliga', message=message)
+    return fetchResponse(query)

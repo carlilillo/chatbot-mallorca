@@ -1,6 +1,7 @@
 import useConversation from "./hooks/useConversations"
 import useInput from "./hooks/useInput"
 import useModel from "./hooks/useModel"
+import useScroll from "./hooks/useScroll"
 
 const models: model[] = [
   {
@@ -27,6 +28,8 @@ function App() {
     setNewUserMessage } = useConversation(model)
 
   const { inputRef, onSubmit } = useInput(setNewUserMessage)
+
+  const { hide, scrollRef, handleScrollClick } = useScroll(userMessages)
 
   const messages = botMessages.map( (botMessage, index) => {
       const userMessage = userMessages[index]
@@ -73,7 +76,7 @@ function App() {
 
       <main>
         <section className="chat">
-          <div>
+          <div ref={scrollRef}>
             {messages}
           </div>
         </section>
@@ -87,7 +90,12 @@ function App() {
           <button>Enviar</button>
         </form>
 
-        <button className="auto-scroll hiding">↓</button>
+        <button 
+          className={`auto-scroll${hide ? " hiding" : ""}`}
+          onClick={handleScrollClick}
+        >
+          ↓
+        </button>
 
       </main>
       
