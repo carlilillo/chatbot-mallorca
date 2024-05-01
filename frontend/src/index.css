@@ -25,6 +25,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  width: 100vw;
 }
 
 button {
@@ -115,10 +116,19 @@ main {
   display: flex;
   height: 75%;
   flex-direction: column;
+  overflow-y: auto;
 }
 
-.chat div {
+.chat > div {
   overflow-y: auto;
+  height: 100%;
+}
+
+.dialog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
 header{
@@ -128,4 +138,30 @@ header{
   top: 0;
   width: 40%;
   padding-top: 1.4em;
+  align-items: center;
+  
+}
+
+
+header select {
+  width: 40%;
+  outline: none;
+  border: 1px solid gray;
+  background-color: #1a1a1a;
+  height: 3em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auto-scroll {
+  font-size: 2em;
+  position: absolute;
+  border-radius: 5em;
+  padding: 0.3em 0.7em;
+  left: 47.5%;
+  top: 85%;
+}
+
+.hiding {
+  display: none;
 }
