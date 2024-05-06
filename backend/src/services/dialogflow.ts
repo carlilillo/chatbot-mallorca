@@ -135,23 +135,23 @@ export async function setAction(
 
   if (intentAction === action.SendIntentResponse) {
 
-    res.json({response: text})
+    res.json({response: [text]})
 
   } else if (intentAction === action.LaLigaRequest) {
 
-    const resultMessage = await getModelResponse(model, 'laliga', query)
-    res.json({response: resultMessage})
+    const values = await getModelResponse(model, 'laliga', query)
+    res.json({response: values})
 
   } else if (intentAction === action.CopaDelReyRequest) {
 
-    const resultMessage = await getModelResponse(model, 'copa-del-rey', query)
-    res.json({response: resultMessage})
+    const values = await getModelResponse(model, 'copa-del-rey', query)
+    res.json({response: values})
 
   } else if (intentAction === action.unknown) {
 
     res.json({
       error: "intent not matched",
-      response: "Vuelve a escribir una nueva frase"
+      response: ["Vuelve a escribir una nueva frase"]
     })
 
   }

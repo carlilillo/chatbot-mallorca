@@ -23,7 +23,7 @@ export default function useConversation(model: model) {
           const botMessagesClone = botMessages.slice()
           botMessagesClone.push({
             id: botMessages.length,
-            input: response.response
+            input: response.response.map((value: any) => value.message).join('')
           })
           setbotMessages(botMessagesClone)
     

@@ -22,10 +22,17 @@ export function getQuery(obj: string, message: string) {
 }
 
 export async function getResponse(query: string) {
-    const completion = await openai.chat.completions.create({
+    const stream = await openai.chat.completions.create({
         messages: [{ role: "user", content: query }],
-        model: "gpt-3.5-turbo"
-      });
+        model: "gpt-3.5-turbo",
+        stream: true
+    });
+
+    const values: {message: string}[] = []
+    for await (const chunk of stream) {
+        values.push({message: chunk.choices[0]?.delta?.content || ""});
+    }
+
     
-      return completion.choices[0].message.content
+    return { values }
 }
