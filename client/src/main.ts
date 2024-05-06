@@ -1,24 +1,81 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+const models: model[] = [
+  {
+    value: 'openai',
+    htmlText: 'Chat GPT'
+  }, 
+  {
+    value: 'meta',
+    htmlText: 'Llama Chat'
+  }
+]
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+// añade los modelos al select del header
+document.querySelector<HTMLSelectElement>('.models')!.innerHTML = 
+  models
+    .map(model => 
+      `<option value="${model.value}">${model.htmlText}</option>`)
+    .join('')
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// inicializa el primer modelo como el predeterminado
+document.querySelector<HTMLHeadingElement>('.model')!.innerHTML = 
+  `Usando ${models[0].htmlText}`
+
+// completa la funcionalidad de cambiar de modelo
+document.querySelector<HTMLSelectElement>('.models')!
+  .addEventListener('change', (event) => {
+    const target = event.target as HTMLSelectElement
+    const chosenModel = models.find(model => model.value === target.value)
+    document.querySelector<HTMLHeadingElement>('.model')!.innerHTML = 
+      `Usando ${chosenModel?.htmlText}`
+  })
+
+
+// set scroll button functionality
+const scrollElement = document.querySelector<HTMLDivElement>('.scroll-element')!
+const scrollButton = document.querySelector<HTMLButtonElement>('.auto-scroll')!
+
+const handleScrollButton = () => {
+  const offsetHeight = scrollElement.offsetHeight!
+  const scrollTop = scrollElement.scrollTop!
+  const scrollHeight = scrollElement.scrollHeight!
+
+  if (scrollHeight<= offsetHeight + scrollTop) {
+    scrollButton.classList.add('hiding')
+  } else {
+    scrollButton.classList.remove('hiding')
+  }
+}
+
+// verifica que al scrollear se pueda ir hacia abajo
+scrollElement.addEventListener('scrollend', handleScrollButton)
+
+scrollButton.addEventListener('click', () => {
+  scrollElement.scrollBy({
+    top: scrollElement.scrollHeight!,
+    left: 0,
+    behavior: 'smooth'
+  })
+  scrollButton.classList.remove('hiding')
+})
+
+// añadir el mensaje del usuario en el chat general
+document.querySelector<HTMLFormElement>('.form')!
+  .addEventListener('submit', (event) => {
+    event.preventDefault()
+    // obtener el input del usuario
+    const inputElement = document.querySelector('.input-form') as HTMLInputElement
+
+    const userInput = inputElement.value
+
+    if (!userInput) return
+    
+    // cargar el input del usuario en el DOM
+    document.querySelector<HTMLDivElement>('.scroll-element')!.innerHTML += `<div>
+    <p><span>Tú</span><br />${userInput}</p></div>`
+
+    // reiniciar el input
+    inputElement.value = ''
+
+    handleScrollButton()
+  })

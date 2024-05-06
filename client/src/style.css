@@ -13,19 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  align-items: end;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -33,34 +25,7 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  width: 100vw;
 }
 
 button {
@@ -93,4 +58,114 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+input {
+  border-radius: 10px;
+  font-size: 1em;
+  outline: none;
+  border: #646cff;
+  width: 100%;
+}
+
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+form {
+  display: flex;
+  gap: 15px;
+  padding: 1em 0 2em 0;
+  width: 100%;
+  justify-content: center;
+}
+
+p {
+  text-align: center;
+  width: 100%;
+  text-align: start;
+  margin-top: 0;
+}
+
+.chat div span {
+  font-weight: bold;
+}
+
+@media (max-width: 624px) {
+  form {
+    flex-direction: column;
+  }
+  input {
+    height: 1em;
+  }
+  
+}
+
+
+main {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.chat {
+  display: flex;
+  height: 75%;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.chat > div {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.dialog {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 40%;
+  padding-top: 1.4em;
+  align-items: center;
+  
+}
+
+header h1 {
+  text-align: center;
+  margin: 0.3em 0 0 0;
+}
+
+header select {
+  width: 40%;
+  outline: none;
+  border: 1px solid gray;
+  background-color: #1a1a1a;
+  height: 3em;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.auto-scroll {
+  font-size: 2em;
+  position: absolute;
+  border-radius: 5em;
+  padding: 0.3em 0.7em;
+  left: 47.5%;
+  top: 85%;
+}
+
+.hiding {
+  display: none;
 }
