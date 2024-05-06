@@ -1,19 +1,11 @@
-import { retrievalResponse } from "./definitions"
+import { getQuery, getResponse } from "../RAG/response"
 
-export default async function getModelRetrieval(
+export async function getModelResponse(
     model: string, 
     objective: string, 
     message: string
 ) {
-    const res = await fetch(`http://localhost:8000/api/${model}/${objective}`,
-    {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({ message })
-    })
-
-    const result = await res.json() as retrievalResponse
-    return result.message
+    const query = getQuery(objective, message)
+    const response = await getResponse(query)
+    return response
 }

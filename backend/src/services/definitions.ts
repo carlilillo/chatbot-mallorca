@@ -23,7 +23,3 @@ export interface actionParams {
   model: string,
   query: string
 }
-
-export interface retrievalResponse {
-  message: string
-}

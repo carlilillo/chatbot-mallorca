@@ -1,0 +1,17 @@
+
+[
+    {
+        "temporada": "2022-2023",
+        "posicion": 9,
+        "victorias": 14,
+        "empates": 16,
+        "derrotas": 8
+    },
+    {
+        "temporada": "2021-2022",
+        "posicion": 16,
+        "victorias": 10,
+        "empates": 19,
+        "derrotas": 9
+    }
+]

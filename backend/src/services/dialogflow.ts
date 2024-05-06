@@ -1,6 +1,6 @@
 import dialogflow from '@google-cloud/dialogflow';
 import { intentNames, action, actionParams } from './definitions';
-import getModelRetrieval from './ragApi';
+import { getModelResponse } from './ragApi';
 
 const sessionClient = 
   new dialogflow.SessionsClient(
@@ -139,12 +139,12 @@ export async function setAction(
 
   } else if (intentAction === action.LaLigaRequest) {
 
-    const resultMessage = await getModelRetrieval(model, 'la-liga', query)
+    const resultMessage = await getModelResponse(model, 'laliga', query)
     res.json({response: resultMessage})
 
   } else if (intentAction === action.CopaDelReyRequest) {
 
-    const resultMessage = await getModelRetrieval(model, 'copa-del-rey', query)
+    const resultMessage = await getModelResponse(model, 'copa-del-rey', query)
     res.json({response: resultMessage})
 
   } else if (intentAction === action.unknown) {

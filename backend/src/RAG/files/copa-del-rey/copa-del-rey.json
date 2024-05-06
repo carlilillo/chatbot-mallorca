@@ -1,0 +1,59 @@
+[
+    {
+        "equipo": "Mallorca",
+        "temporada": "2023-2024",
+        "rondas": [
+            {
+                "Primera eliminatoria": {
+                    "contrincante": "Boiro",
+                    "campo": "Campo del Boiro",
+                    "marcador": "4-0",
+                    "resultado": "victoria"
+                }, 
+                "Segunda eliminatoria": {
+                    "contrincante": "Valle de Egües",
+                    "campo": "Campo del Valle de Egues",
+                    "marcador": "3-0",
+                    "resultado": "victoria"
+                },
+                "Dieciseisavos": {
+                    "contrincante": "Burgos CF",
+                    "campo": "Campo del Burgos CF",
+                    "marcador": "3-0",
+                    "resultado": "victoria"
+                },
+                "Octavos": {
+                    "contrincante": "Tenerife",
+                    "campo": "Campo del Tenerife",
+                    "marcador": "1-0",
+                    "resultado": "victoria"
+                },
+                "Cuartos": {
+                    "contrincante": "Girona",
+                    "campo": "Campo del Mallorca",
+                    "marcador": "3-2",
+                    "resultado": "victoria"
+                },
+                "Semifinal": {
+                    "contrincante": "Real Sociedad",
+                    "patido de ida": {
+                        "campo de ida": "Campo del Mallorca",
+                        "marcador de ida": "0-0",
+                        "resultado de ida": "empate"
+                    },
+                    "partido de vuelta": {
+                        "marcador de vuelta": "1-1. En penaltis termiraon 5-4",
+                        "campo de vuelta": "Campo de la Real Sociedad",
+                        "resultado de vuelta": "victoria"
+                    },
+                    "resultado final": "victoria"
+                },
+                "Final": {
+                    "contrincante": "Athletic Club",
+                    "marcador": "1-1. En penaltis termiraon 5-3",
+                    "resultado": "derrota"
+                }
+            }
+        ]
+    }
+]
