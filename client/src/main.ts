@@ -1,4 +1,6 @@
+import fetchModelResponse from './services/dialogflow'
 import './style.css'
+
 const models: model[] = [
   {
     value: 'openai',
@@ -61,7 +63,7 @@ scrollButton.addEventListener('click', () => {
 
 // añadir el mensaje del usuario en el chat general
 document.querySelector<HTMLFormElement>('.form')!
-  .addEventListener('submit', (event) => {
+  .addEventListener('submit', async (event) => {
     event.preventDefault()
     // obtener el input del usuario
     const inputElement = document.querySelector('.input-form') as HTMLInputElement
@@ -69,13 +71,34 @@ document.querySelector<HTMLFormElement>('.form')!
     const userInput = inputElement.value
 
     if (!userInput) return
+
+    // obtener el modelo
+    const model = document.querySelector<HTMLSelectElement>('.models')!.value
     
     // cargar el input del usuario en el DOM
-    document.querySelector<HTMLDivElement>('.scroll-element')!.innerHTML += `<div>
-    <p><span>Tú</span><br />${userInput}</p></div>`
+    const conversation = document.querySelector<HTMLDivElement>('.scroll-element')!
+    conversation.innerHTML += `<div><p><span>Tú</span><br />${userInput}</p></div>`
+
+    handleScrollButton()
+
+
+    let currentConversation = conversation.innerHTML
+    // añadir un poco de traslación
+    setTimeout(() => {
+      conversation.innerHTML = `${currentConversation}<div><p><span>Bot</span><br />Cargando la respuesta...</p></div>`
+    }, 300)
 
     // reiniciar el input
     inputElement.value = ''
+    inputElement.disabled = true
+
+    const res = await fetchModelResponse(userInput, model)
+
+    // se reinicia el texto anterior por la respuesta
+    conversation.innerHTML = 
+      `${currentConversation}<div><p><span>Bot</span><br />${res.response.map((text:any) => text.message).join('')}</p></div>`
+
+    inputElement.disabled = false
 
     handleScrollButton()
   })
