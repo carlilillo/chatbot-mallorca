@@ -83,20 +83,16 @@ document.querySelector<HTMLFormElement>('.form')!
 
 
     let currentConversation = conversation.innerHTML
-    // añadir un poco de traslación
-    setTimeout(() => {
-      conversation.innerHTML = `${currentConversation}<div><p><span>Bot</span><br />Cargando la respuesta...</p></div>`
-    }, 300)
 
     // reiniciar el input
     inputElement.value = ''
     inputElement.disabled = true
 
-    const res = await fetchModelResponse(userInput, model)
+    const response = await fetchModelResponse(userInput, model)
 
     // se reinicia el texto anterior por la respuesta
     conversation.innerHTML = 
-      `${currentConversation}<div><p><span>Bot</span><br />${res.response.map((text:any) => text.message).join('')}</p></div>`
+      `${currentConversation}<div><p><span>Bot</span><br />${response}</p></div>`
 
     inputElement.disabled = false
 

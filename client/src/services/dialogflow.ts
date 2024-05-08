@@ -17,5 +17,9 @@ export default async function fetchModelResponse(
 
     const json = await res.json()
 
-    return json
+    const result = typeof(json.response) === 'string' 
+        ? json.response 
+        : json.response.map((text:any) => text.message).join('')
+
+    return result
 }

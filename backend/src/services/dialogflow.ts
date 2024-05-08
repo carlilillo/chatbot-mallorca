@@ -135,7 +135,7 @@ export async function setAction(
 
   if (intentAction === action.SendIntentResponse) {
 
-    res.json({response: [text]})
+    res.json({response: text})
 
   } else if (intentAction === action.LaLigaRequest) {
 
@@ -151,7 +151,7 @@ export async function setAction(
 
     res.json({
       error: "intent not matched",
-      response: ["Vuelve a escribir una nueva frase"]
+      response: "Vuelve a escribir una nueva frase"
     })
 
   }
