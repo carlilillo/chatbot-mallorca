@@ -1,11 +1,9 @@
 
 
-export default async function getData(
+export default async function fetchModelResponse(
     input: string, 
     model: string
 ) {
-
-
     const res = await fetch(`http://localhost:3000/api/dialogflow` ,
     {
         method: 'POST',
@@ -19,6 +17,9 @@ export default async function getData(
 
     const json = await res.json()
 
-    return json
+    const result = typeof(json.response) === 'string' 
+        ? json.response 
+        : json.response.map((text:any) => text.message).join('')
 
+    return result
 }

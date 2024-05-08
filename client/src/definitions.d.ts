@@ -1,6 +1,3 @@
-
-
-
 type message = {
     id?: number,
     input: string
@@ -8,7 +5,6 @@ type message = {
 
 
 type model = {
-    id: number,
     value: string,
     htmlText: string
 }
