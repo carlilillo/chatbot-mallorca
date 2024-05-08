@@ -81,8 +81,8 @@ document.querySelector<HTMLFormElement>('.form')!
 
     handleScrollButton()
 
-
     let currentConversation = conversation.innerHTML
+    conversation.innerHTML = `${currentConversation}<div><p><span>Bot</span><br />Cargando la respuesta...</p></div>`
 
     // reiniciar el input
     inputElement.value = ''
