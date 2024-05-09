@@ -6,6 +6,7 @@ export const intentNames = {
   laligaNo: "Laliga - no",
   copaDelRey: "Copa del Rey",
   copaDelReyNo: "Copa del Rey - no",
+  youtubeVideos: "Videos de Youtube",
   error: "Default Fallback Intent",
 }
   
@@ -13,6 +14,7 @@ export enum action {
   SendIntentResponse,
   LaLigaRequest,
   CopaDelReyRequest,
+  youtubeVideos,
   unknown
 }
 

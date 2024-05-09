@@ -82,7 +82,8 @@ document.querySelector<HTMLFormElement>('.form')!
     handleScrollButton()
 
     let currentConversation = conversation.innerHTML
-    conversation.innerHTML = `${currentConversation}<div><p><span>Bot</span><br />Cargando la respuesta...</p></div>`
+    conversation.innerHTML = 
+      `${currentConversation}<div><p><span>Bot</span><br />Cargando la respuesta...</p></div>`
 
     // reiniciar el input
     inputElement.value = ''
@@ -92,7 +93,7 @@ document.querySelector<HTMLFormElement>('.form')!
 
     // se reinicia el texto anterior por la respuesta
     conversation.innerHTML = 
-      `${currentConversation}<div><p><span>Bot</span><br />${response}</p></div>`
+      `${currentConversation}${response}`
 
     inputElement.disabled = false
 

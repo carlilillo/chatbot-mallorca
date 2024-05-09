@@ -106,7 +106,7 @@ p {
 
 
 main {
-  width: 40%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -168,4 +168,19 @@ header select {
 
 .hiding {
   display: none;
+}
+
+.scroll-element img {
+  border-radius: 2em;
+  margin-top: 2em;
+}
+
+a div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+a strong {
+  text-align: center;
 }

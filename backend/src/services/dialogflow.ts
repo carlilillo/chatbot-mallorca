@@ -1,6 +1,7 @@
 import dialogflow from '@google-cloud/dialogflow';
 import { intentNames, action, actionParams } from './definitions';
 import { getModelResponse } from './ragApi';
+import getYoutubeVideos from './youtube';
 
 const sessionClient = 
   new dialogflow.SessionsClient(
@@ -115,6 +116,11 @@ export async function routeActionFromIntent(
 
     return { intentAction }
 
+  } else if (intentName === intentNames.youtubeVideos) {
+    // it is youtube videos fetch intent
+
+    return { intentAction: action.youtubeVideos }
+
   } else if (intentName === intentNames.welcome
       || intentName === intentNames.error) {
     return {
@@ -135,23 +141,38 @@ export async function setAction(
 
   if (intentAction === action.SendIntentResponse) {
 
-    res.json({response: text})
+    res.json({
+      response: text,
+      responseType: "message"
+    })
 
   } else if (intentAction === action.LaLigaRequest) {
 
     const values = await getModelResponse(model, 'laliga', query)
-    res.json({response: values})
+    res.json({
+      response: values, 
+      responseType: "message"
+    })
 
   } else if (intentAction === action.CopaDelReyRequest) {
 
     const values = await getModelResponse(model, 'copa-del-rey', query)
-    res.json({response: values})
+    res.json({
+      response: values,
+      responseType: "message"
+    })
 
+  } else if (intentAction === action.youtubeVideos) {
+    const values = await getYoutubeVideos()
+    res.json({
+      response: JSON.stringify(values),
+      responseType: "youtube"
+    })
   } else if (intentAction === action.unknown) {
 
     res.json({
-      error: "intent not matched",
-      response: "Vuelve a escribir una nueva frase"
+      responseType: "message",
+      response: "Ha habido un error y no he podido entenderte. Vuelve a escribir una nueva frase, por favor"
     })
 
   }
