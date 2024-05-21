@@ -8,20 +8,22 @@
   </head>
   <body>
     <div id="root">
-      <header>
-        <select class="models"></select>
-        <h1 class="model"></h1>
-      </header>
 
       <main>
-        <section class="chat">
-          <div class="scroll-element">
-            <div>
-              <p><span>Bot</span><br />¡Preguntame algo sobre el RCD Mallorca!</p>
+        <aside>
+          <h2 style="margin: 0 0 0.6em 0;">Opciones</h2>
+          <select class="models"></select>
+          <button class="clean-button">Limpiar Chat</button>
+        </aside>
+        <div style="height: 100%; overflow-y: auto; padding-top: 1em;">
+          <section class="chat">
+            <div class="scroll-element">
+              <div>
+                <p><span>Bot</span><br />¡Preguntame algo sobre el RCD Mallorca!</p>
+              </div>
             </div>
-          </div>
-        </section>
-        
+          </section>
+        </div>
         <form class="form">
           <input class="input-form" placeholder="Cuéntame qué hizo el Mallorca..."/>
           <button>Enviar</button>

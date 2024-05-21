@@ -2,30 +2,30 @@ import { Request, Response } from "express";
 import { randomUUID } from "crypto";
 import { routeActionFromIntent, requestIntent, setAction } from "../services/dialogflow";
 
-export async function dialogFlowGetIntent(req: Request, res: Response) {
-	const getCurrentSession = (req: Request, res: Response) => {
-		let sessionId = req.cookies.sessionId as string
-		if (!sessionId) {
-			sessionId = randomUUID()
-			// set a cookie to persist user
-			res.cookie(
-				'sessionId',
-				sessionId, 
-				{
-					sameSite: 'none',
-					secure: true
-				}
-			)
-		}
-	
-		return { sessionId }
+function getCurrentSession(req: Request, res: Response) {
+	let sessionId = req.cookies.sessionId as string
+	if (!sessionId) {
+		sessionId = randomUUID()
+		// set a cookie to persist user
+		res.cookie(
+			'sessionId',
+			sessionId, 
+			{
+				sameSite: 'none',
+				secure: true
+			}
+		)
 	}
 
+	return { sessionId }
+}
+
+export async function dialogFlowGetIntent(req: Request, res: Response) {
     try {
 		const body = req.body
 		const model = body.model
 		const input = body.input
-		
+
 		const { sessionId } = getCurrentSession(req, res)
 		
 		
