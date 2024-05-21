@@ -114,9 +114,8 @@ main {
 
 .chat {
   display: flex;
-  height: 75%;
+  height: 100%;
   flex-direction: column;
-  overflow-y: auto;
 }
 
 .chat > div {
@@ -131,24 +130,19 @@ main {
   justify-content: end;
 }
 
-header{
+aside{
+  width: 17%;
   display: flex;
   flex-direction: column;
+  padding: 1.4em 1em 1.4em 1.4em;
   position: fixed;
   top: 0;
-  width: 40%;
-  padding-top: 1.4em;
+  left: 0;
   align-items: center;
-  
 }
 
-header h1 {
-  text-align: center;
-  margin: 0.3em 0 0 0;
-}
-
-header select {
-  width: 40%;
+aside select {
+  width: 100%;
   outline: none;
   border: 1px solid gray;
   background-color: #1a1a1a;
@@ -183,4 +177,47 @@ a div {
 
 a strong {
   text-align: center;
+}
+
+.trainer-image {
+  height: 200px;
+}
+
+.trainers, .players {
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+}
+.trainer, .player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.trainer p, .players p{
+  text-align: center;
+}
+
+@media (max-width: 1300px) {
+  .trainers, .players {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .trainers, .players {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+  }
+}
+
+.trainers {
+  margin-bottom: 2em;
+}
+
+.clean-button {
+  margin-top: 0.9em;
+  outline: none;
+  border: 1px solid gray;
+  border-radius: 10px;
 }

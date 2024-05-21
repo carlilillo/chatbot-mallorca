@@ -19,38 +19,10 @@ document.querySelector<HTMLSelectElement>('.models')!.innerHTML =
       `<option value="${model.value}">${model.htmlText}</option>`)
     .join('')
 
-// inicializa el primer modelo como el predeterminado
-document.querySelector<HTMLHeadingElement>('.model')!.innerHTML = 
-  `Usando ${models[0].htmlText}`
-
-// completa la funcionalidad de cambiar de modelo
-document.querySelector<HTMLSelectElement>('.models')!
-  .addEventListener('change', (event) => {
-    const target = event.target as HTMLSelectElement
-    const chosenModel = models.find(model => model.value === target.value)
-    document.querySelector<HTMLHeadingElement>('.model')!.innerHTML = 
-      `Usando ${chosenModel?.htmlText}`
-  })
-
 
 // set scroll button functionality
 const scrollElement = document.querySelector<HTMLDivElement>('.scroll-element')!
 const scrollButton = document.querySelector<HTMLButtonElement>('.auto-scroll')!
-
-const handleScrollButton = () => {
-  const offsetHeight = scrollElement.offsetHeight!
-  const scrollTop = scrollElement.scrollTop!
-  const scrollHeight = scrollElement.scrollHeight!
-
-  if (scrollHeight<= offsetHeight + scrollTop) {
-    scrollButton.classList.add('hiding')
-  } else {
-    scrollButton.classList.remove('hiding')
-  }
-}
-
-// verifica que al scrollear se pueda ir hacia abajo
-scrollElement.addEventListener('scrollend', handleScrollButton)
 
 scrollButton.addEventListener('click', () => {
   scrollElement.scrollBy({
@@ -79,7 +51,6 @@ document.querySelector<HTMLFormElement>('.form')!
     const conversation = document.querySelector<HTMLDivElement>('.scroll-element')!
     conversation.innerHTML += `<div><p><span>Tú</span><br />${userInput}</p></div>`
 
-    handleScrollButton()
 
     let currentConversation = conversation.innerHTML
     conversation.innerHTML = 
@@ -89,13 +60,22 @@ document.querySelector<HTMLFormElement>('.form')!
     inputElement.value = ''
     inputElement.disabled = true
 
-    const response = await fetchModelResponse(userInput, model)
+    try {
+      const response = await fetchModelResponse(userInput, model)
+      // se reinicia el texto anterior por la respuesta
+      conversation.innerHTML = `${currentConversation}${response}`
 
-    // se reinicia el texto anterior por la respuesta
-    conversation.innerHTML = 
-      `${currentConversation}${response}`
+      inputElement.disabled = false
 
-    inputElement.disabled = false
+    } catch( error ){
+      console.error(error)
+      conversation.innerHTML = `${currentConversation}<div><p><span>Bot</span><br />No se ha podido completar la respuesta, vuelva a intentarlo, por favor</p></div>`
+      inputElement.disabled = false
 
-    handleScrollButton()
+    }
   })
+
+document.querySelector<HTMLButtonElement>('.clean-button')?.addEventListener('click', () => {
+  const conversation = document.querySelector<HTMLDivElement>('.scroll-element')!
+  conversation.innerHTML = "<div><p><span>Bot</span><br />¡Preguntame algo sobre el RCD Mallorca!</p></div>"
+})

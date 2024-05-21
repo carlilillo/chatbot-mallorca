@@ -2,6 +2,7 @@ import dialogflow from '@google-cloud/dialogflow';
 import { intentNames, action, actionParams } from './definitions';
 import { getModelResponse } from './ragApi';
 import getYoutubeVideos from './youtube';
+import getTeam from './teams';
 
 const sessionClient = 
   new dialogflow.SessionsClient(
@@ -44,8 +45,7 @@ async function deleteContext(sessionId: string, context: string) {
     }
   )
 
-  const name = sessionContext
-    .projectLocationAgentEnvironmentUserSessionContextPath(
+  const name = sessionContext.projectLocationAgentEnvironmentUserSessionContextPath(
       process.env.DIALOG_FLOW_PROJECTID!,
       process.env.API_LOCATION!,
       'draft',
@@ -121,6 +121,10 @@ export async function routeActionFromIntent(
 
     return { intentAction: action.youtubeVideos }
 
+  } else if (intentName === intentNames.team) {
+
+    return { intentAction: action.team }
+    
   } else if (intentName === intentNames.welcome
       || intentName === intentNames.error) {
     return {
@@ -168,6 +172,11 @@ export async function setAction(
       response: JSON.stringify(values),
       responseType: "youtube"
     })
+
+  } else if (intentAction === action.team) {
+    const result = getTeam(text)
+    res.json(result)
+
   } else if (intentAction === action.unknown) {
 
     res.json({

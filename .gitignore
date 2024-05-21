@@ -1,3 +1,6 @@
 *.env
 node_modules/
 backend/google_credentials.json
+.venv
+scraping/
+plantillas/

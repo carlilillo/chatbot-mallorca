@@ -1,9 +1,4 @@
-import { dialogFlowResponse, youtubeResponseType } from "./apiResTypes"
-
-const responseHandlers = {
-    "message": responseIntoHtml,
-    "youtube": youtubeIntoHtml
-}
+import { dialogFlowResponse, teamResponseType, youtubeResponseType } from "./apiResTypes"
 
 function youtubeIntoHtml(response: any) {
     const youtubeResponse = youtubeResponseType.parse(JSON.parse(response))
@@ -29,6 +24,35 @@ function youtubeIntoHtml(response: any) {
 
 function responseIntoHtml(response: any) {
     return `<div><p><span>Bot</span><br />${response}</p></div>`
+}
+
+function teamIntoHtml(response: any) {
+    const teamResponse = teamResponseType.parse(JSON.parse(response))
+    const htmlTrainers = teamResponse.trainers.map(trainer => 
+        `<div class="trainer">
+            <img class="trainer-image" src="${trainer.picture}" alt="Imágen de ${trainer.name}"/>
+            <p><strong>${trainer.name}</strong> ${trainer.games}</p>
+        </div>`
+    ).join('')
+
+    const htmlPlayers = teamResponse.players.map(player => 
+        `<div class="trainer">
+            <img class="trainer-image" src="${player.picture}" alt="Imágen de ${player.name}"/>
+            <p><strong>${player.name}</strong> ${player.position} ${player.gamesPlayed}</p>
+        </div>`
+    ).join('')
+
+    return `<div><p><span>Bot</span><br />
+        La plantilla es la siguiente:<br /><br />
+        <strong class="plantilla-title">- Entrenadores:</strong> <div class="trainers">${htmlTrainers}</div> 
+        <strong class="plantilla-title">- Jugadores:</strong> <div class="players">${htmlPlayers}</div></p>
+        </div>`
+}
+
+const responseHandlers = {
+    "message": responseIntoHtml,
+    "youtube": youtubeIntoHtml,
+    "team": teamIntoHtml
 }
 
 export default async function fetchModelResponse(
