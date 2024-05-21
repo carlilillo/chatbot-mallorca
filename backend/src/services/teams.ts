@@ -26,19 +26,34 @@ export default function getTeam(date: string) {
     const fileContent = readFileSync(path, 'utf-8')
     const jsonContent = JSON.parse(fileContent) as team
     const trainers = jsonContent.Entrenadores.map(trainer => {
+        const games = trainer.Jornadas ? `Jornadas: ${trainer.Jornadas}` : ""
+        const picture = trainer.Foto 
+            ? trainer.Foto 
+            : "https://s.hs-data.com/bilder/spieler/gross/517809.jpg?fallback=png"
+
         return {
             name: trainer.Nombre,
-            games: trainer.Jornadas ? `Jornadas: ${trainer.Jornadas}` : "",
-            picture: trainer.Foto ? trainer.Foto : "https://s.hs-data.com/bilder/spieler/gross/517809.jpg?fallback=png"
+            games: games,
+            picture: picture
         }
     })
 
     const players = jsonContent.Jugadores.map(player => {
+        const picture = player.Foto 
+            ? player.Foto 
+            : "https://s.hs-data.com/bilder/spieler/gross/517809.jpg?fallback=png"
+
+        const gamesPlayed = player['Partidos Jugados'] 
+            ? `${player['Partidos Jugados']} partidos` 
+            : ""
+
+        const position = player['Posición'] ? `(${player['Posición']})` : ""
+
         return {
             name: player.Nombre,
-            picture: player.Foto ? player.Foto : "https://s.hs-data.com/bilder/spieler/gross/517809.jpg?fallback=png",
-            gamesPlayed: player['Partidos Jugados'] ? `${player['Partidos Jugados']} partidos` : "",
-            position: player['Posición'] ? `(${player['Posición']})` : "",
+            picture: picture,
+            gamesPlayed: gamesPlayed,
+            position: position,
         }
     })
 
