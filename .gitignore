@@ -4,4 +4,6 @@ backend/google_credentials.json
 .venv
 scraping/
 plantillas/
-RAG/files/
+RAG/files/laliga/
+RAG/files/laliga/
+RAG/files/copa-del-rey/
