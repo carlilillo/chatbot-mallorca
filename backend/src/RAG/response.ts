@@ -9,9 +9,7 @@ export function getQuery(obj: string, message: string) {
     const helperText = readFileSync(path, 'utf-8')
 
     return `Usa el siguiente contenido JSON para responder
-    a la pregunta. Si la respuesta no se puede encontrar, entonces escribe 
-    que no sabes la respuesta. Intenta decorar un poco la respuesta para 
-    que la respuesta no sea tan corta.
+    a la pregunta. Si la respuesta no se puede encontrar, entonces revisa en tu base de datos a ver si tienes la respuesta. Si no sabes la respuesta, di que no sabes la respuesta, pero no digas nada del contenido JSON. Intenta decorar un poco la respuesta para que la respuesta no sea tan corta.
 
     Contenido JSON: 
     \"\"\"
