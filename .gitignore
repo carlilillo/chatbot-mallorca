@@ -4,4 +4,4 @@ backend/google_credentials.json
 .venv
 scraping/
 plantillas/
-RAG/files
+RAG/files/
