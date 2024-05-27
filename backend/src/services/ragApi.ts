@@ -5,7 +5,7 @@ export async function getModelResponse(
     objective: string, 
     message: string
 ) {
-    const query = getQuery(objective, message)
-    const { values } = await getResponse(query, model)
+    const query = getQuery(objective)
+    const { values } = await getResponse(message, query, model)
     return values
 }

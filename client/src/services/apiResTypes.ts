@@ -4,7 +4,8 @@ const responsesType = z.enum(["message", "youtube", "team"])
 
 export const dialogFlowResponse = z.object({
     response: z.string(),
-    responseType: responsesType
+    responseType: responsesType,
+    sendLastInput: z.boolean().optional()
 })
 
 export const youtubeResponseType = z.array(z.object({

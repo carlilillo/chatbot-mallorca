@@ -23,9 +23,12 @@ async function llamaChatResponse(query: string) {
 }
 
 
-async function openAiResponse(query: string) {
+async function openAiResponse(query: string, message: string) {
     const stream = await openai.chat.completions.create({
-        messages: [{ role: "user", content: query }],
+        messages: [
+            { role: "assistant", content: query},
+            { role: "user", content: message }
+        ],
         model: "gpt-3.5-turbo"
     });
 
@@ -34,8 +37,17 @@ async function openAiResponse(query: string) {
     return values
 }
 
-async function geminiResponse(query: string) {
-    const result = await gemini.generateContent(query)
+async function geminiResponse(query: string, message: string) {
+    const chat = gemini.startChat({
+        history: [
+            {
+                role: "user",
+                parts: [{text: query}]
+            }
+        ]
+    })
+
+    const result = await chat.sendMessage(message)
     const response = result.response
     const text = response.text()
     return text

@@ -61,21 +61,24 @@ export async function routeActionFromIntent(
   intentName: string, 
   paramsFields: any, 
   sessionId: string,
-): Promise<{intentAction: action}>  {
+): Promise<{intentAction: action, sendLastResponse?: boolean}>  {
 
 
   const ragIntentsFilter = 
-  async (param: string, 
+  async (
+    param: string, 
     context: string, 
     intentNameToFilter: string, 
     negativeIntentName: string, 
-    requestAction:action) => {
+    requestAction:action
+    ) => {
 
     if (intentName === intentNameToFilter) {
       const hadParam = paramsFields[param]["stringValue"]
       if (!hadParam) {
         return {
           intentAction: action.SendIntentResponse,
+          sendLastResponse: true
         }
       }
       await deleteContext(sessionId, context)
@@ -94,7 +97,7 @@ export async function routeActionFromIntent(
 
   if (intentName?.startsWith(intentNames.laliga)) {
     // it is laliga dialogflow or derivative intent
-    const { intentAction } = await ragIntentsFilter(
+    const { intentAction, sendLastResponse } = await ragIntentsFilter(
       "La-liga", 
       "Laligaglobal-followup", 
       intentNames.laliga, 
@@ -102,11 +105,11 @@ export async function routeActionFromIntent(
       action.LaLigaRequest
     )
 
-    return { intentAction }
+    return { intentAction, sendLastResponse }
 
   } else if (intentName?.startsWith(intentNames.copaDelRey)) {
     // it is copa del rey dialogflow or derivative intent
-    const { intentAction } = await ragIntentsFilter(
+    const { intentAction, sendLastResponse } = await ragIntentsFilter(
       "Copa-del-Rey", 
       "CopadelRey-followup", 
       intentNames.copaDelRey, 
@@ -114,7 +117,7 @@ export async function routeActionFromIntent(
       action.CopaDelReyRequest
     )
 
-    return { intentAction }
+    return { intentAction, sendLastResponse }
 
   } else if (intentName === intentNames.youtubeVideos) {
     // it is youtube videos fetch intent
@@ -141,18 +144,20 @@ export async function setAction(
     intentAction, 
     text, 
     model, 
-    query }: actionParams) {
+    queryToModel,
+    sendLastResponse }: actionParams) {
 
   if (intentAction === action.SendIntentResponse) {
 
     res.json({
       response: text,
-      responseType: "message"
+      responseType: "message",
+      sendLastInput: sendLastResponse ?? false
     })
 
   } else if (intentAction === action.LaLigaRequest) {
 
-    const values = await getModelResponse(model, 'laliga', query)
+    const values = await getModelResponse(model, 'laliga', queryToModel)
     res.json({
       response: values, 
       responseType: "message"
@@ -160,7 +165,7 @@ export async function setAction(
 
   } else if (intentAction === action.CopaDelReyRequest) {
 
-    const values = await getModelResponse(model, 'copa-del-rey', query)
+    const values = await getModelResponse(model, 'copa-del-rey', queryToModel)
     res.json({
       response: values,
       responseType: "message"

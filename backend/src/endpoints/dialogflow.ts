@@ -25,6 +25,7 @@ export async function dialogFlowGetIntent(req: Request, res: Response) {
 		const body = req.body
 		const model = body.model
 		const input = body.input
+		const lastInput = body.lastInput
 
 		const { sessionId } = getCurrentSession(req, res)
 		
@@ -36,11 +37,12 @@ export async function dialogFlowGetIntent(req: Request, res: Response) {
   		const text = intentResponse.queryResult?.fulfillmentText!
 		const query = intentResponse.queryResult?.queryText!
 		
-		const { intentAction } = await routeActionFromIntent(
+		const { intentAction, sendLastResponse } = await routeActionFromIntent(
 			intentName,  paramsFields, sessionId
 		)
 
-		await setAction({ res, intentAction, text, model, query })
+		const queryToModel = lastInput ?? query
+		await setAction({ res, intentAction, text, model, queryToModel, sendLastResponse })
 		res.end()
 	} catch (error) {
 		console.error(error)

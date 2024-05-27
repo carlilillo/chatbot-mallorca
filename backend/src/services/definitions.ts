@@ -25,7 +25,8 @@ export interface actionParams {
   intentAction: action,
   text: string,
   model: string,
-  query: string
+  queryToModel: string,
+  sendLastResponse: boolean | undefined
 }
 
 type trainerInterface = {
