@@ -1,7 +1,5 @@
 import { readFileSync } from "fs"
-import OpenAI from "openai"
-
-const openai = new OpenAI()
+import { models } from "./modelsResponse"
 
 
 export function getQuery(obj: string, message: string) {
@@ -9,7 +7,7 @@ export function getQuery(obj: string, message: string) {
     const helperText = readFileSync(path, 'utf-8')
 
     return `Usa el siguiente contenido JSON para responder
-    a la pregunta. Si la respuesta no se puede encontrar, entonces revisa en tu base de datos a ver si tienes la respuesta. Si no sabes la respuesta, di que no sabes la respuesta, pero no digas nada del contenido JSON. Intenta decorar un poco la respuesta para que la respuesta no sea tan corta.
+    a la pregunta. Si no sabes la respuesta, di que simplemente no sabes la respuesta, sin comentar nada del siguiente fichero.
 
     Contenido JSON: 
     \"\"\"
@@ -19,13 +17,14 @@ export function getQuery(obj: string, message: string) {
     Pregunta: ${message}`
 }
 
-export async function getResponse(query: string) {
-    const stream = await openai.chat.completions.create({
-        messages: [{ role: "user", content: query }],
-        model: "gpt-3.5-turbo"    
-    });
+export async function getResponse(query: string, model: string) {
+    let mod = models.find(m => m.name === model)
+    if (!mod) {
+        mod = models[0]
+        console.warn("No se ha encontrado la según el modelo. Se  ha utilizado el primero")
+    }
 
-    const values = stream.choices[0].message.content
-    
+    const values =  await mod.callback(query)
+
     return { values }
 }

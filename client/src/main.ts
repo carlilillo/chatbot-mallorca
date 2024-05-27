@@ -5,10 +5,10 @@ const models: model[] = [
   {
     value: 'openai',
     htmlText: 'Chat GPT'
-  }, 
+  },
   {
-    value: 'meta',
-    htmlText: 'Llama Chat'
+    value: 'google',
+    htmlText: 'Gemini Chat'
   }
 ]
 
