@@ -16,6 +16,7 @@ export const youtubeResponseType = z.array(z.object({
 }))
 
 export const teamResponseType = z.object({
+    datePeriod: z.string(),
     trainers: z.array(z.object({
         picture: z.string(),
         games: z.string(),

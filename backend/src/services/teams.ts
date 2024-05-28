@@ -1,20 +1,15 @@
 import { existsSync, readFileSync } from "fs"
 import { team } from "./definitions"
+import { getRange } from "./datePeriod"
 
-function getPath(date: string) {
-    // example: convert "2019-01-01/2020-12-31" to "2019-20"
-    const response = date.split('/').map(datePeriod => datePeriod.slice(0, 4))
-
-    const datePeriod = date 
-        ? `${response[0]}-${response[1].slice(-2)}`
-        : "2023-24"
-
+function getPath(datePeriod: string) {
     const path = `${__dirname}/plantillas/plantilla${datePeriod}.jsonl`
     return { path }
 }
 
 export default function getTeam(date: string) {
-    const { path } = getPath(date)
+    const { datePeriod } = getRange(date)
+    const { path } = getPath(datePeriod)
 
     if (!existsSync(path)) {
         return {
@@ -58,7 +53,7 @@ export default function getTeam(date: string) {
     })
 
     const result = {
-        response: JSON.stringify({ trainers, players }),
+        response: JSON.stringify({ datePeriod, trainers, players }),
         responseType: "team"
     }
     

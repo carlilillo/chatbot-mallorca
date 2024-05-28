@@ -48,7 +48,7 @@ function teamIntoHtml(response: any) {
     ).join('')
 
     return `<div><p><span>Bot</span><br />
-        La plantilla es la siguiente:<br /><br />
+        La plantilla de la temporada ${teamResponse.datePeriod} es la siguiente:<br /><br />
         <strong class="plantilla-title">- Entrenadores:</strong> <div class="trainers">${htmlTrainers}</div> 
         <strong class="plantilla-title">- Jugadores:</strong> <div class="players">${htmlPlayers}</div></p>
         </div>`
