@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import { randomUUID } from "crypto";
 import { routeActionFromIntent, requestIntent, setAction } from "../services/dialogflow";
+import { action } from "../definitions";
+import { concatenateDatePeriods } from "../utils/datePeriod";
 
 function getCurrentSession(req: Request, res: Response) {
 	let sessionId = req.cookies.sessionId as string
@@ -34,14 +36,18 @@ export async function dialogFlowGetIntent(req: Request, res: Response) {
 
 		const intentName = intentResponse.queryResult?.intent?.displayName!
   		const paramsFields = intentResponse.queryResult?.parameters?.fields!
-  		const text = intentResponse.queryResult?.fulfillmentText!
 		const query = intentResponse.queryResult?.queryText!
+		let text = intentResponse.queryResult?.fulfillmentText!
 		
 		const { intentAction, sendLastResponse } = await routeActionFromIntent(
 			intentName,  paramsFields, sessionId
 		)
 
 		const queryToModel = lastInput ?? query
+		if (intentAction === action.games) {
+			const datePeriod = paramsFields['date-period']
+			text = concatenateDatePeriods(datePeriod)
+		}
 		await setAction({ res, intentAction, text, model, queryToModel, sendLastResponse })
 		res.end()
 	} catch (error) {

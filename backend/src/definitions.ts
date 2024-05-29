@@ -8,6 +8,7 @@ export const intentNames = {
   copaDelReyNo: "Copa del Rey - no",
   youtubeVideos: "Videos de Youtube",
   team: "Plantillas",
+  games: "Partidos",
   error: "Default Fallback Intent",
 }
   
@@ -17,6 +18,7 @@ export enum action {
   CopaDelReyRequest,
   youtubeVideos,
   team,
+  games,
   unknown
 }
 
@@ -44,4 +46,38 @@ type playerInterface = {
 export type team = {
   Entrenadores: trainerInterface[], 
   Jugadores: playerInterface[]
+}
+
+export type games =  {
+  "Temporada": string,
+  "Equipo": string,
+  "Partidos": {
+      "Ronda/Jornada":string,
+      "Equipo Local":string,
+      "Equipo Visitante":string,
+      "Goles Locales":string,
+      "Goles Visitante":string,
+      "Resultado":string,
+      "Campo":string,
+      "Fecha":string,
+      "Árbitro":string,
+      "Detalles Goles Locales":string,
+      "Detalles Goles Visitante":string,
+      "Division":string,
+      "Competicion":string,
+      "Información adicional"?: string
+  }[]
+}[]
+
+export type fields = {
+  fields: {
+    endDate: {
+      stringValue: string
+      kind: string
+    },
+    startDate: {
+      stringValue: string
+      kind: string
+    }
+  }
 }

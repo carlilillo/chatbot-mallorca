@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "fs"
-import { team } from "./definitions"
-import { getRange } from "./datePeriod"
+import { team } from "../definitions"
+import { getRange } from "../utils/datePeriod"
 
 function getPath(datePeriod: string) {
     const path = `${__dirname}/plantillas/plantilla${datePeriod}.jsonl`
@@ -13,7 +13,7 @@ export default function getTeam(date: string) {
 
     if (!existsSync(path)) {
         return {
-            response: "No se pueden obtener el fichero de ese año en específicio.",
+            response: "No se pueden obtener los datos de ese año en específicio.",
             responseType: "message"
         }
     }

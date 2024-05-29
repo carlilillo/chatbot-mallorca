@@ -1,8 +1,10 @@
 import dialogflow from '@google-cloud/dialogflow';
-import { intentNames, action, actionParams } from './definitions';
+import { intentNames, action, actionParams, fields } from '../definitions';
 import { getModelResponse } from './ragApi';
 import getYoutubeVideos from './youtube';
 import getTeam from './teams';
+import { getRange } from '../utils/datePeriod';
+import { getDatePeriodToCopa } from './getTimeFromCopaDelRey';
 
 const sessionClient = 
   new dialogflow.SessionsClient(
@@ -37,7 +39,7 @@ export async function requestIntent(message: string, sessionId: string) {
   return { intentResponse }
 }
 
-async function deleteContext(sessionId: string, context: string) {
+export async function deleteContext(sessionId: string, context: string) {
 
   const sessionContext = new dialogflow.ContextsClient(
     {
@@ -128,6 +130,14 @@ export async function routeActionFromIntent(
 
     return { intentAction: action.team }
     
+  } else if (intentName === intentNames.games) {
+
+    const paramKind = paramsFields['date-period']['kind']
+    if (paramKind === "stringValue") 
+      return { intentAction: action.SendIntentResponse}
+
+    return { intentAction: action.games }
+
   } else if (intentName === intentNames.welcome
       || intentName === intentNames.error) {
     return {
@@ -164,8 +174,12 @@ export async function setAction(
     })
 
   } else if (intentAction === action.CopaDelReyRequest) {
-
-    const values = await getModelResponse(model, 'copa-del-rey', queryToModel)
+    const { datePeriod } = await getDatePeriodToCopa(queryToModel)
+    const objective = datePeriod
+      ? 'copa-del-rey-completo'
+      : 'copa-del-rey'
+    
+    const values = await getModelResponse(model, objective, queryToModel, datePeriod)
     res.json({
       response: values,
       responseType: "message"
@@ -181,6 +195,15 @@ export async function setAction(
   } else if (intentAction === action.team) {
     const result = getTeam(text)
     res.json(result)
+
+  } else if (intentAction === action.games) {
+
+    const { datePeriod } = getRange(text)
+    const values = await getModelResponse(model, 'partidos', queryToModel, datePeriod)
+    res.json({
+      response: values,
+      responseType: "message"
+    })
 
   } else if (intentAction === action.unknown) {
 
