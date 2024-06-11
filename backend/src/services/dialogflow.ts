@@ -132,10 +132,6 @@ export async function routeActionFromIntent(
     
   } else if (intentName === intentNames.games) {
 
-    const paramKind = paramsFields['date-period']['kind']
-    if (paramKind === "stringValue") 
-      return { intentAction: action.SendIntentResponse}
-
     return { intentAction: action.games }
 
   } else if (intentName === intentNames.welcome
@@ -186,7 +182,7 @@ export async function setAction(
     })
 
   } else if (intentAction === action.youtubeVideos) {
-    const values = await getYoutubeVideos()
+    const values = await getYoutubeVideos(queryToModel)
     res.json({
       response: JSON.stringify(values),
       responseType: "youtube"

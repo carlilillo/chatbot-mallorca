@@ -8,12 +8,15 @@ export const dialogFlowResponse = z.object({
     sendLastInput: z.boolean().optional()
 })
 
-export const youtubeResponseType = z.array(z.object({
-    id: z.string(),
-    title: z.string(),
-    thumbnail: z.string(),
-    publishedAt: z.string()
-}))
+export const youtubeResponseType = z.object({
+    videos: z.array(z.object({
+        id: z.string(),
+        title: z.string(),
+        thumbnail: z.string(),
+        publishedAt: z.string()
+    })),
+    query: z.string()
+})
 
 export const teamResponseType = z.object({
     datePeriod: z.string(),

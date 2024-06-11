@@ -79,3 +79,16 @@ document.querySelector<HTMLButtonElement>('.clean-button')?.addEventListener('cl
   const conversation = document.querySelector<HTMLDivElement>('.scroll-element')!
   conversation.innerHTML = "<div><p><span>Bot</span><br />¡Preguntame algo sobre el RCD Mallorca!</p></div>"
 })
+
+
+document.querySelector<HTMLButtonElement>('.option-icon')?.addEventListener('click', () => {
+  const aside = document.querySelector('aside') as HTMLElement
+  aside.classList.remove("not-visible")
+  aside.classList.add("visible")
+})
+
+document.querySelector<HTMLButtonElement>('.close-section button')?.addEventListener('click', () => {
+  const aside = document.querySelector('aside') as HTMLElement
+  aside.classList.add("not-visible")//.style.left = "-100vw"
+  aside.classList.remove("visible")
+})

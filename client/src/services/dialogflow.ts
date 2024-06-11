@@ -8,7 +8,14 @@ let setInput = {
 function youtubeIntoHtml(response: any) {
     const youtubeResponse = youtubeResponseType.parse(JSON.parse(response))
 
-    const youtubeHtml = youtubeResponse.map(resp => 
+    if (youtubeResponse.videos.length === 0) {
+        return `
+        <div>
+            <p><span>Bot</span><br />No se han podido encontrar videos de Youtube del Mallorca según tu búsqueda.</p>
+        </div>`
+    }
+
+    const youtubeHtml = youtubeResponse.videos.map(resp => 
         `<a href="https://youtube.com/watch?v=${resp.id}" target="_blank">
             <div>
                 <img src="${resp.thumbnail}" alt="Imagen del Mallorca">
@@ -17,10 +24,18 @@ function youtubeIntoHtml(response: any) {
         </a>`
     ).join('\n')
 
+    const lengthMessage = youtubeResponse.videos.length == 1
+        ? "un video de Youtube obtenido"
+        : `los primeros ${youtubeResponse.videos.length} videos de Youtube obtenidos`
+
+    const isFromQueryText = youtubeResponse.query
+        ? `sobre "${youtubeResponse.query}"`
+        : ""
+
     const htmlResponse = 
         `<div>
             <p><span>Bot</span><br />
-                Aquí tienes los ${youtubeResponse.length} primeros videos obtenidos:
+                Aquí tienes ${lengthMessage} ${isFromQueryText}:
             </p>
         </div>${youtubeHtml}`
 

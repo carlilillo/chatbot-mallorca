@@ -99,7 +99,7 @@ p {
     flex-direction: column;
   }
   input {
-    height: 1em;
+    height: 2em;
   }
   
 }
@@ -139,6 +139,7 @@ aside{
   top: 0;
   left: 0;
   align-items: center;
+  height: 100vh;
 }
 
 aside select {
@@ -220,4 +221,46 @@ a strong {
   outline: none;
   border: 1px solid gray;
   border-radius: 10px;
+}
+
+.option-icon {
+  position: fixed;
+  top: 5%;
+  left: 4%;
+  padding: 0.2em 1%;
+  border-radius: 1em;
+  display: none;
+}
+.close-section {
+  position: relative;
+  top: 70%;
+  display: none;
+}
+
+@media (max-width: 788px) {
+  aside  {
+    background-color: #242424;
+    width: 40%;
+    transition: left 1s;
+  }
+
+  .visible {
+    left: 0;
+  }
+
+  .not-visible {
+    left: -60vw;
+  }
+
+  .option-icon {
+    display: inline-block;
+  }
+  
+  .close-section {
+    display: inline-block;
+  }
+}
+
+select option {
+  height: 0.3em;
 }

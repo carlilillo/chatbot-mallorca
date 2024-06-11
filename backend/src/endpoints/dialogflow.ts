@@ -46,7 +46,10 @@ export async function dialogFlowGetIntent(req: Request, res: Response) {
 		const queryToModel = lastInput ?? query
 		if (intentAction === action.games) {
 			const datePeriod = paramsFields['date-period']
-			text = concatenateDatePeriods(datePeriod)
+
+			text = datePeriod.structValue
+				? concatenateDatePeriods(datePeriod)
+				: "2023/2024"
 		}
 		await setAction({ res, intentAction, text, model, queryToModel, sendLastResponse })
 		res.end()
