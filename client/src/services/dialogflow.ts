@@ -1,4 +1,5 @@
 import { dialogFlowResponse, teamResponseType, youtubeResponseType } from "./apiResTypes"
+import { botIcon } from "./icons"
 
 let setInput = {
     sendLastInput: false,
@@ -10,7 +11,7 @@ function youtubeIntoHtml(response: any) {
 
     if (youtubeResponse.videos.length === 0) {
         return `
-        <div>
+        <div class="bot-message">${botIcon()}
             <p><span>Bot</span><br />No se han podido encontrar videos de Youtube del Mallorca según tu búsqueda.</p>
         </div>`
     }
@@ -33,7 +34,7 @@ function youtubeIntoHtml(response: any) {
         : ""
 
     const htmlResponse = 
-        `<div>
+        `<div class="bot-message">${botIcon()}
             <p><span>Bot</span><br />
                 Aquí tienes ${lengthMessage} ${isFromQueryText}:
             </p>
@@ -43,7 +44,7 @@ function youtubeIntoHtml(response: any) {
 }
 
 function responseIntoHtml(response: any) {
-    return `<div><p><span>Bot</span><br />${response}</p></div>`
+    return `<div class="bot-message">${botIcon()}<p><span>Bot</span><br />${response}</p></div>`
 }
 
 function teamIntoHtml(response: any) {
@@ -62,11 +63,13 @@ function teamIntoHtml(response: any) {
         </div>`
     ).join('')
 
-    return `<div><p><span>Bot</span><br />
-        La plantilla de la temporada ${teamResponse.datePeriod} es la siguiente:<br /><br />
-        <strong class="plantilla-title">- Entrenadores:</strong> <div class="trainers">${htmlTrainers}</div> 
-        <strong class="plantilla-title">- Jugadores:</strong> <div class="players">${htmlPlayers}</div></p>
-        </div>`
+    return `<div class="bot-message">${botIcon()}
+                <div><p><span>Bot</span><br />
+                La plantilla de la temporada ${teamResponse.datePeriod} es la siguiente:<br /><br />
+                <strong class="plantilla-title">- Entrenadores:</strong> <div class="trainers">${htmlTrainers}</div> 
+                <strong class="plantilla-title">- Jugadores:</strong> <div class="players">${htmlPlayers}</div>
+                </p></div>
+            </div>`
 }
 
 const responseHandlers = {
@@ -86,7 +89,9 @@ export default async function fetchModelResponse(
         setInput.sendLastInput = false
     }
 
-    const res = await fetch(`http://localhost:3000/api/dialogflow` ,
+    const url = import.meta.env.VITE_BACKEND_ENDPOINT_PRE!
+
+    const res = await fetch(`${url}/api/dialogflow` ,
     {
         method: 'POST',
         headers: {

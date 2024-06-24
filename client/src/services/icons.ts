@@ -1,0 +1,17 @@
+
+
+export function cleanIconSvg()  {
+    return `<svg style="position: relative; top: 0.34em; left: 0.4em;" width="20px" height="20px" viewBox="0 0 1024.00 1024.00" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M864.453 386.372H604.968V135.834c0-39.533-32.049-71.582-71.582-71.582h-35.791c-39.533 0-71.582 32.049-71.582 71.582v250.538H166.527c-34.592 0-62.634 28.042-62.634 62.634 0 30.327 21.556 55.617 50.181 61.392L85.997 833.761c0 49.417 35.791 90.596 89.478 89.478 53.687-1.118 85.893-53.687 156.91-53.687 172.801 0 397.852 53.687 397.852 53.687 49.417 0 89.478-40.061 89.478-89.478l68.827-326.927c22.634-9.439 38.547-31.772 38.547-57.828-0.001-34.591-28.043-62.634-62.636-62.634zM461.803 153.73c0-29.651 24.036-53.687 53.687-53.687 29.651 0 53.687 24.036 53.687 53.687v232.642H461.803V153.73z m319.456 662.753c-11.092 41.902-31.537 70.965-70.44 70.965 0 0-197.096-49.497-355.544-53.438l41.811-142.707c2.779-9.485-2.658-19.427-12.142-22.207-9.485-2.777-19.426 2.658-22.205 12.142l-45.103 153.939c-55.562 8.478-102.763 52.27-142.161 52.27-43.62 0-67.243-33.993-53.687-70.965 13.556-36.974 74.247-305.459 74.247-305.459l641.576 0.617c-0.001 0.001-45.261 262.941-56.352 304.843z m83.194-340.633H166.527c-14.825 0-26.843-12.019-26.843-26.843 0-14.825 12.019-26.843 26.843-26.843h697.927c14.825 0 26.843 12.019 26.843 26.843s-12.019 26.843-26.844 26.843z" fill="#ffffff"></path></g></svg>`
+}
+
+export function optionIconSvg() {
+    return `<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_429_11030)"> <path d="M4 8H13" stroke="#737373" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17 8L20 8" stroke="#737373" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M11 16L20 16" stroke="#737373" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4 16H7" stroke="#737373" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <circle cx="9" cy="16" r="2" stroke="#737373" stroke-width="2.5"></circle> <circle cx="15" cy="8" r="2" stroke="#737373" stroke-width="2.5"></circle> </g> <defs> <clipPath id="clip0_429_11030"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg>`
+}
+
+export function botIcon() {
+    return `<img class="bot-image" src="mallorca-logo.webp" alt="bot image">`
+}
+
+export function userIcon() {
+    return `<svg class="user-image" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <circle cx="12" cy="6" r="4" fill="#adadad"></circle> <path opacity="0.5" d="M20 17.5C20 19.9853 20 22 12 22C4 22 4 19.9853 4 17.5C4 15.0147 7.58172 13 12 13C16.4183 13 20 15.0147 20 17.5Z" fill="#adadad"></path> </g></svg>`
+}

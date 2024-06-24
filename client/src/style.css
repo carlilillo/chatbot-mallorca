@@ -11,6 +11,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-smoothing: grayscale;
 }
 
 body {
@@ -87,7 +88,7 @@ p {
   text-align: center;
   width: 100%;
   text-align: start;
-  margin-top: 0;
+  margin: 0 0 2em 0;
 }
 
 .chat div span {
@@ -110,6 +111,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  height: 100vh;
 }
 
 .chat {
@@ -121,6 +123,7 @@ main {
 .chat > div {
   overflow-y: auto;
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 .dialog {
@@ -143,13 +146,14 @@ aside{
 }
 
 aside select {
-  width: 100%;
+  width: 80%;
   outline: none;
   border: 1px solid gray;
   background-color: #1a1a1a;
   height: 3em;
   border-radius: 10px;
   text-align: center;
+  font-size: 0.9em;
 }
 
 .auto-scroll {
@@ -221,6 +225,7 @@ a strong {
   outline: none;
   border: 1px solid gray;
   border-radius: 10px;
+  width: 80%;
 }
 
 .option-icon {
@@ -231,16 +236,19 @@ a strong {
   border-radius: 1em;
   display: none;
 }
+
+.option-icon > svg {
+  height: 25px;
+}
+
 .close-section {
-  position: relative;
-  top: 70%;
   display: none;
 }
 
-@media (max-width: 788px) {
+@media (max-width: 1130px) {
   aside  {
     background-color: #242424;
-    width: 40%;
+    width: 60%;
     transition: left 1s;
   }
 
@@ -249,7 +257,7 @@ a strong {
   }
 
   .not-visible {
-    left: -60vw;
+    left: -100vw;
   }
 
   .option-icon {
@@ -257,10 +265,32 @@ a strong {
   }
   
   .close-section {
-    display: inline-block;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+
+  .close-section button {
+    outline: 0;
+    background-color: transparent;
+    border-radius: 12px;
+    &:hover {
+      border-color: transparent;
+    }
   }
 }
 
-select option {
-  height: 0.3em;
+option {
+  font-weight: 400;
+}
+
+.bot-message .bot-image, .user-image {
+  height: 2.7rem;
+  width: auto;
+  margin: 0;
+  padding: 0.2em 0.5em 0 0;
+}
+
+.bot-message, .user-message {
+  display: flex;
 }

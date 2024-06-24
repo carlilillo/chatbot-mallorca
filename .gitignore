@@ -7,3 +7,5 @@ plantillas/
 RAG/files/laliga/
 RAG/files/laliga/
 RAG/files/copa-del-rey/
+dist/
+*.sh

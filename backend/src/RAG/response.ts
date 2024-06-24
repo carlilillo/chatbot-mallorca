@@ -9,7 +9,7 @@ export function getQuery(obj: string, datePeriod?: string) {
 
     const query = limitJson(helperText, datePeriod)
 
-    return `Usa el siguiente contenido JSON para responder a la pregunta. Si no sabes la respuesta, comenta exactamente: "No tengo la información suficiente para responder a tu pregunta". Intenta responder con mayor detalle posible.
+    return `Usa el siguiente contenido JSON para responder a la pregunta. La respuesta debe ser en formato texto simple. Si no sabes la respuesta, comenta exactamente: "No tengo la información suficiente para responder a tu pregunta". Intenta responder con mayor detalle posible.
 
     Contenido JSON: 
     \"\"\"
