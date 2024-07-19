@@ -1,59 +1,1283 @@
 [
     {
-        "equipo": "Mallorca",
-        "temporada": "2023-2024",
-        "rondas": [
-            {
-                "Primera eliminatoria": {
-                    "contrincante": "Boiro",
-                    "campo": "Campo del Boiro",
-                    "marcador": "4-0",
-                    "resultado": "victoria"
-                }, 
-                "Segunda eliminatoria": {
-                    "contrincante": "Valle de Egües",
-                    "campo": "Campo del Valle de Egues",
-                    "marcador": "3-0",
-                    "resultado": "victoria"
-                },
-                "Dieciseisavos": {
-                    "contrincante": "Burgos CF",
-                    "campo": "Campo del Burgos CF",
-                    "marcador": "3-0",
-                    "resultado": "victoria"
-                },
-                "Octavos": {
-                    "contrincante": "Tenerife",
-                    "campo": "Campo del Tenerife",
-                    "marcador": "1-0",
-                    "resultado": "victoria"
-                },
-                "Cuartos": {
-                    "contrincante": "Girona",
-                    "campo": "Campo del Mallorca",
-                    "marcador": "3-2",
-                    "resultado": "victoria"
-                },
-                "Semifinal": {
-                    "contrincante": "Real Sociedad",
-                    "patido de ida": {
-                        "campo de ida": "Campo del Mallorca",
-                        "marcador de ida": "0-0",
-                        "resultado de ida": "empate"
-                    },
-                    "partido de vuelta": {
-                        "marcador de vuelta": "1-1. En penaltis termiraon 5-4",
-                        "campo de vuelta": "Campo de la Real Sociedad",
-                        "resultado de vuelta": "victoria"
-                    },
-                    "resultado final": "victoria"
-                },
-                "Final": {
-                    "contrincante": "Athletic Club",
-                    "marcador": "1-1. En penaltis termiraon 5-3",
-                    "resultado": "derrota"
-                }
-            }
-        ]
+       "Temporada":"2005-06",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Alcoyano",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"4",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Jueves 20/10/2005",
+             "Árbitro":"Undiano Mallenco",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Parrado (Minuto 15); 2-0 Mesa (Minuto 44) (Penalti); 3-0 Antoñana (Minuto 64); 4-1 Antoñana (Minuto 87)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 3-1 Ōkubo (Minuto 69)",
+             "Ronda":"Ronda 3"
+          }
+       ]
+    },
+    {
+       "Temporada":"2011-12",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Sporting de Gijón",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Derrota",
+             "Campo":"Son Moix (Son Moix)",
+             "Fecha":"Martes 13/12/2011",
+             "Árbitro":"Álvarez Izquierdo",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Juan Muñiz (Minuto 83)",
+             "Ronda":"Dieciseisavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Sporting de Gijón",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Victoria",
+             "Campo":"El Molinón (El Molinón)",
+             "Fecha":"Martes 20/12/2011",
+             "Árbitro":"Fernández Borbalán",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Álex Menéndez (Minuto 18) (Propia Puerta); 0-2 Nsue (Minuto 70)",
+             "Ronda":"Dieciseisavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Real Sociedad",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Derrota",
+             "Campo":"Anoeta",
+             "Fecha":"Miércoles 04/01/2012",
+             "Árbitro":"Paradas Romero",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Aranburu (Minuto 16); 2-0 Agirretxe (Minuto 54)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Octavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Real Sociedad",
+             "Número de Goles Locales":"6",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"Son Moix",
+             "Fecha":"Martes 10/01/2012",
+             "Árbitro":"Ayza Gámez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-1 Chori Castro (Minuto 34); 2-1 Hemed (Minuto 36); 3-1 Nunes (Minuto 38); 4-1 Chori Castro (Minuto 40); 5-1 Alfaro (Minuto 53); 6-1 Hemed (Minuto 59)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Ifrán (Minuto 16)",
+             "Ronda":"Octavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Athletic Club",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Derrota",
+             "Campo":"San Mamés",
+             "Fecha":"Miércoles 18/01/2012",
+             "Árbitro":"González González",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Llorente (Minuto 34); 2-0 Muniain (Minuto 58)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Cuartos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Athletic Club",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Derrota",
+             "Campo":"Son Moix",
+             "Fecha":"Miércoles 25/01/2012",
+             "Árbitro":"Del Cerro Grande",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Ramis (Minuto 75) (Propia Puerta)",
+             "Ronda":"Cuartos de final (vuelta)"
+          }
+       ]
+    },
+    {
+       "Temporada":"2012-13",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Deportivo de La Coruña",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"Riazor",
+             "Fecha":"Jueves 01/11/2012",
+             "Árbitro":"Ayza Gámez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Manuel Pablo (Minuto 54)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Geromel (Minuto 70)",
+             "Ronda":"Dieciseisavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Deportivo de La Coruña",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Empate",
+             "Campo":"Son Moix",
+             "Fecha":"Jueves 29/11/2012",
+             "Árbitro":"Estrada Fernández",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Dieciseisavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Sevilla",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"5",
+             "Resultado":"Derrota",
+             "Campo":"Son Moix",
+             "Fecha":"Miércoles 12/12/2012",
+             "Árbitro":"Clos Gómez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Negredo (Minuto 13); 0-2 Negredo (Minuto 18); 0-3 Medel (Minuto 26); 0-4 Botía (Minuto 48); 0-5 Luna (Minuto 85)",
+             "Ronda":"Octavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Sevilla",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Victoria",
+             "Campo":"Ramón Sánchez Pizjuán",
+             "Fecha":"Miércoles 09/01/2013",
+             "Árbitro":"González González",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Manu del Moral (Minuto 22)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Brandon (Minuto 52); 1-2 Alfaro (Minuto 56)",
+             "Ronda":"Octavos de final (vuelta)"
+          }
+       ]
+    },
+    {
+       "Temporada":"2022-23",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Autol",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"6",
+             "Resultado":"Victoria",
+             "Campo":"Estadio Municipal La Planilla",
+             "Fecha":"Sábado 12/11/2022",
+             "Árbitro":"Iglesias Villanueva",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Abdón Prats (Minuto 15); 0-2 Grenier (Minuto 18); 0-3 Ángel (Minuto 28); 0-4 Abdón Prats (Minuto 34); 0-5 Ángel (Minuto 71); 0-6 Kadewere (Minuto 88)",
+             "Ronda":"Ronda 1"
+          },
+          {
+             "Equipo Local":"Real Unión",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"Stadium Gal",
+             "Fecha":"Martes 20/12/2022",
+             "Árbitro":"Pulido Santana",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Dani Rodríguez (Minuto 24)",
+             "Ronda":"Ronda 2"
+          },
+          {
+             "Equipo Local":"Pontevedra",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Victoria",
+             "Campo":"Estadio Municipal de Pasarón",
+             "Fecha":"Miércoles 04/01/2023",
+             "Árbitro":"Del Cerro Grande",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Abdón Prats (Minuto 97); 0-2 Muriqi (Minuto 104)",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos",
+             "Ronda":"Dieciseisavos de final"
+          },
+          {
+             "Equipo Local":"Real Sociedad",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Derrota",
+             "Campo":"Anoeta",
+             "Fecha":"Martes 17/01/2023",
+             "Árbitro":"Hernández Hernández",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Navarro 5'",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Octavos de final"
+          }
+       ]
+    },
+    {
+       "Temporada":"2021-22",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Gimnástica Segoviana",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Victoria",
+             "Campo":"C.M. La Albuera",
+             "Fecha":"Miércoles 01/12/2021",
+             "Árbitro":"Alberola Rojas",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Ángel (Minuto 94); 0-2 Ángel (Minuto 105)",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos y una tanda de penaltis que terminó 0-2",
+             "Ronda":"Ronda 1"
+          },
+          {
+             "Equipo Local":"Llanera",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"6",
+             "Resultado":"Victoria",
+             "Campo":"Nuevo Ganzabal (H.Sintética)",
+             "Fecha":"Jueves 16/12/2021",
+             "Árbitro":"De Burgos Bengoetxea",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Sedlar (Minuto 49); 0-2 Mboula (Minuto 54); 0-3 Sedlar (Minuto 62); 0-4 Gayá (Minuto 74); 0-5 Llabrés (Minuto 78); 0-6 Ángel (Minuto 86)",
+             "Ronda":"Ronda 2"
+          },
+          {
+             "Equipo Local":"Eibar",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Victoria",
+             "Campo":"Estadio Municipal de Ipurua",
+             "Fecha":"Miércoles 05/01/2022",
+             "Árbitro":"Ortiz Arias",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Blanco Leschuk (Minuto 45)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Gayá (Minuto 69); 1-2 Ángel (Minuto 82)",
+             "Ronda":"Dieciseisavos de final"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Espanyol",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"Estadio de Son Moix",
+             "Fecha":"Sábado 15/01/2022",
+             "Árbitro":"Jaime Latre",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Kubo (Minuto 32); 2-0 Abdón Prats (Minuto 60)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 2-1 Puado (Minuto 62)",
+             "Ronda":"Octavos de final"
+          },
+          {
+             "Equipo Local":"Rayo Vallecano",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Derrota",
+             "Campo":"Estadio de Vallecas",
+             "Fecha":"Miércoles 02/02/2022",
+             "Árbitro":"Soto Grado",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Trejo (Minuto 44) (Penalti)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Cuartos de final"
+          }
+       ]
+    },
+    {
+       "Temporada":"2004-05",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Rayo Vallecano",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 27/10/2004",
+             "Árbitro":"Medina Cantalejo",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Farinós (Minuto 112) (Penalti)",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos",
+             "Ronda":"Treintaidosavos de Final"
+          },
+          {
+             "Equipo Local":"Lanzarote",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Miércoles 10/11/2004",
+             "Árbitro":"Rubinos Pérez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Maciot (Minuto 25); 2-0 Maciot (Minuto 70)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 2-1 Pereyra (Minuto 78)",
+             "Ronda":"Dieciseisavos de final"
+          }
+       ]
+    },
+    {
+       "Temporada":"2017-18",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Lleida Esportiu",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Empate",
+             "Campo":"Estadio de Son Moix",
+             "Fecha":"Miércoles 06/09/2017",
+             "Árbitro":"Caparrós Hernández",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos y una tanda de penaltis que terminó 3-4",
+             "Ronda":"Ronda 2"
+          }
+       ]
+    },
+    {
+       "Temporada":"2015-16",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Huesca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Derrota",
+             "Campo":"Iberostar Estadio",
+             "Fecha":"Jueves 10/09/2015",
+             "Árbitro":"Medié Jiménez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Tyronne (Minuto 53); 0-2 Fran Mérida (Minuto 74)",
+             "Ronda":"Ronda 2"
+          }
+       ]
+    },
+    {
+       "Temporada":"2013-14",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Alcorcón",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"4",
+             "Resultado":"Derrota",
+             "Campo":"Iberostar",
+             "Fecha":"Martes 10/09/2013",
+             "Árbitro":"Medié Jiménez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-4 Gerard Moreno (Minuto 76)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Pacheco (Minuto 21); 0-2 Martínez (Minuto 35); 0-3 Óscar Plano (Minuto 53); 0-4 Óscar Plano (Minuto 66)",
+             "Ronda":"Ronda 2"
+          }
+       ]
+    },
+    {
+       "Temporada":"2014-15",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Las Palmas",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Derrota",
+             "Campo":"Iberostar Estadio",
+             "Fecha":"Miércoles 10/09/2014",
+             "Árbitro":"Figueroa Vázquez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Guzmán (Minuto 53); 0-2 Leo (Minuto 89)",
+             "Ronda":"Ronda 2"
+          }
+       ]
+    },
+    {
+       "Temporada":"2007-08",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Osasuna",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Miércoles 12/12/2007",
+             "Árbitro":"Álvarez Izquierdo",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Pandiani (Minuto 11); 2-0 Miguel Flaño (Minuto 19)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Dieciseisavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Osasuna",
+             "Número de Goles Locales":"4",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 02/01/2008",
+             "Árbitro":"Lizondo Cortés",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Arango (Minuto 64); 2-0 Güiza (Minuto 69); 3-0 Kike Sola (Minuto 80) (Propia Puerta); 4-0 Güiza (Minuto 89)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Dieciseisavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Real Madrid",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Jueves 10/01/2008",
+             "Árbitro":"Delgado Ferreiro",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Trejo (Minuto 23); 2-1 Arango (Minuto 49)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Higuaín (Minuto 24)",
+             "Ronda":"Octavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Real Madrid",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 16/01/2008",
+             "Árbitro":"Medina Cantalejo",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Ibagaza (Minuto 82)",
+             "Ronda":"Octavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Getafe",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Miércoles 23/01/2008",
+             "Árbitro":"Daudén Ibáñez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 De la Red (Minuto 51)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Cuartos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Getafe",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 30/01/2008",
+             "Árbitro":"Iturralde González",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Ibagaza 8'; 2-0 Arango (Minuto 55)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 2-1 Granero (Minuto 80)",
+             "Ronda":"Cuartos de final (vuelta)"
+          }
+       ]
+    },
+    {
+       "Temporada":"2018-19",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Oviedo",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Victoria",
+             "Campo":"Estadio de Son Moix",
+             "Fecha":"Martes 11/09/2018",
+             "Árbitro":"Bikandi Garrido",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Ferran Giner (Minuto 57)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Ronda 2"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Valladolid",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Derrota",
+             "Campo":"Estadio de Son Moix",
+             "Fecha":"Miércoles 31/10/2018",
+             "Árbitro":"Medié Jiménez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-2 Buenacasa (Minuto 66)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Verde 9'; 0-2 Verde (Minuto 36)",
+             "Ronda":"Dieciseisavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Valladolid",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Derrota",
+             "Campo":"E.M. José Zorrilla",
+             "Fecha":"Miércoles 05/12/2018",
+             "Árbitro":"Cordero Vega",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-1 Óscar Plano (Minuto 50); 2-1 Verde (Minuto 88)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Abdón Prats (Minuto 48)",
+             "Ronda":"Dieciseisavos de final (vuelta)"
+          }
+       ]
+    },
+    {
+       "Temporada":"2019-20",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"El Álamo",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"Estadio Facundo Rivas  (El Álamo)",
+             "Fecha":"Miércoles 18/12/2019",
+             "Árbitro":"Medié Jiménez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Contreras (Minuto 90+3) (Propia Puerta)",
+             "Ronda":"Ronda 1"
+          },
+          {
+             "Equipo Local":"Zamora",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"Estadio Ruta de la Plata  (Zamora)",
+             "Fecha":"Sábado 11/01/2020",
+             "Árbitro":"Pizarro Gómez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Febas (Minuto 26)",
+             "Ronda":"Ronda 2"
+          },
+          {
+             "Equipo Local":"Zaragoza",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"3",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Derrota",
+             "Campo":"Estadio de la Romareda  (Zaragoza)",
+             "Fecha":"Martes 21/01/2020",
+             "Árbitro":"Mateu Lahoz",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Álex Blanco (Minuto 48); 2-0 Puado (Minuto 54); 3-0 Linares (Minuto 75)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 3-1 Febas (Minuto 85)",
+             "Ronda":"Dieciseisavos de final"
+          }
+       ]
+    },
+    {
+       "Temporada":"2002-03",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Gramanet",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 11/09/2002",
+             "Árbitro":"Losantos Omar",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Álvaro Novo (Minuto 90)",
+             "Ronda":"Treintaidosavos de Final"
+          },
+          {
+             "Equipo Local":"Hércules",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Martes 05/11/2002",
+             "Árbitro":"Medina Cantalejo",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos y una tanda de penaltis que terminó 3-4",
+             "Ronda":"Dieciseisavos de final"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Valladolid",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 08/01/2003",
+             "Árbitro":"Moreno Delgado",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Harold Lozano (Minuto 12); 2-1 Pandiani (Minuto 56)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Xavi Moré (Minuto 30); 2-2 Pachón (Minuto 84)",
+             "Ronda":"Octavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Valladolid",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"4",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 15/01/2003",
+             "Árbitro":"Undiano Mallenco",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-3 Óscar González (Minuto 48)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Carlitos 4'; 0-2 Carlitos 9'; 0-3 Carlitos (Minuto 31); 1-4 Harold Lozano (Minuto 54)",
+             "Ronda":"Octavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Real Madrid",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Jueves 23/01/2003",
+             "Árbitro":"Mejuto González",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Portillo (Minuto 12)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Nadal (Minuto 57)",
+             "Ronda":"Cuartos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Real Madrid",
+             "Número de Goles Locales":"4",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 29/01/2003",
+             "Árbitro":"Téllez Sánchez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Niño 7'; 2-0 Eto'o (Minuto 30); 3-0 Eto'o (Minuto 35); 4-0 Pandiani (Minuto 48)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Cuartos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Deportivo de La Coruña",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"3",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 05/02/2003",
+             "Árbitro":"Esquinas Torres",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-3 Tristán (Minuto 89) (Penalti); 2-3 Makaay (Minuto 94)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Pandiani (Minuto 38); 0-2 Pandiani (Minuto 80); 0-3 Eto'o (Minuto 81)",
+             "Ronda":"Semifinal (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Deportivo de La Coruña",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 05/03/2003",
+             "Árbitro":"Mejuto González",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-1 Ibagaza (Minuto 83)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Fran (Minuto 20)",
+             "Ronda":"Semifinal (vuelta)"
+          },
+          {
+             "Equipo Local":"Recreativo de Huelva",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"3",
+             "Resultado":"Victoria",
+             "Campo":"Martínez Valero (Elche)",
+             "Fecha":"Sábado 28/06/2003 (21:00)",
+             "Árbitro":"Iturralde González",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Pandiani (Minuto 21) (Penalti); 0-2 Eto'o (Minuto 72); 0-3 Eto'o (Minuto 84)",
+             "Ronda":"Final"
+          }
+       ]
+    },
+    {
+       "Temporada":"2010-11",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Sporting de Gijón",
+             "Número de Goles Locales":"3",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 27/10/2010",
+             "Árbitro":"Delgado Ferreiro",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Cavenaghi (Minuto 11); 2-0 Cavenaghi (Minuto 33); 3-1 Rubén (Minuto 89)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 2-1 Barral (Minuto 59)",
+             "Ronda":"Dieciseisavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Sporting de Gijón",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Jueves 11/11/2010",
+             "Árbitro":"Pérez Lasa",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-2 Bilić (Minuto 25); 2-2 Juan Muñiz (Minuto 63)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Nsue (Minuto 10); 0-2 Nsue (Minuto 15)",
+             "Ronda":"Dieciseisavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Almería",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"4",
+             "Número de Goles Visitante":"3",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Miércoles 22/12/2010",
+             "Árbitro":"Teixeira Vitienes",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Ulloa 6' (Penalti); 2-1 Ulloa (Minuto 28); 3-2 Kalu Uche (Minuto 65); 4-2 Ulloa (Minuto 77)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 De Guzmán (Minuto 21); 2-2 Víctor Casadesús (Minuto 44); 4-3 Webó (Minuto 87)",
+             "Ronda":"Octavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Almería",
+             "Número de Goles Locales":"3",
+             "Número de Goles Visitante":"4",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Jueves 06/01/2011",
+             "Árbitro":"Undiano Mallenco",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-4 Cavenaghi (Minuto 69); 2-4 Pereira (Minuto 75); 3-4 Cavenaghi (Minuto 76)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Piatti 1'; 0-2 Juanma Ortiz 3'; 0-3 Juanma Ortiz (Minuto 33); 0-4 Piatti (Minuto 41)",
+             "Ronda":"Octavos de final (vuelta)"
+          }
+       ]
+    },
+    {
+       "Temporada":"2003-04",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Sabadell",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"4",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 08/10/2003",
+             "Árbitro":"Esquinas Torres",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-2 Camacho (Minuto 55); 2-3 Camacho (Minuto 70)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Ligüera 3'; 0-2 Correa (Minuto 30); 1-3 Correa (Minuto 60); 2-4 Correa (Minuto 78)",
+             "Ronda":"Treintaidosavos de Final"
+          },
+          {
+             "Equipo Local":"Levante",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Miércoles 17/12/2003",
+             "Árbitro":"Daudén Ibáñez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Aganzo (Minuto 14); 2-0 Aganzo (Minuto 77)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Dieciseisavos de final"
+          }
+       ]
+    },
+    {
+       "Temporada":"2016-17",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Reus",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Victoria",
+             "Campo":"Iberostar Estadio",
+             "Fecha":"Miércoles 07/09/2016",
+             "Árbitro":"Pulido Santana",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Brandon (Minuto 92)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos",
+             "Ronda":"Ronda 2"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"UCAM Murcia",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Derrota",
+             "Campo":"Iberostar Estadio",
+             "Fecha":"Miércoles 12/10/2016",
+             "Árbitro":"Medié Jiménez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-1 Salomão (Minuto 55)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Juanma 4'; 1-2 Imaz (Minuto 69)",
+             "Ronda":"Ronda 3"
+          }
+       ]
+    },
+    {
+       "Temporada":"2006-07",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Athletic Club",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 25/10/2006",
+             "Árbitro":"Teixeira Vitienes",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Gabilondo (Minuto 12)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Maxi López (Minuto 50)",
+             "Ronda":"Dieciseisavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Athletic Club",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 08/11/2006",
+             "Árbitro":"Velasco Carballo",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Janković (Minuto 19); 2-1 Víctor Casadesús (Minuto 101)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Yeste (Minuto 67)",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos",
+             "Ronda":"Dieciseisavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Deportivo de La Coruña",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Miércoles 10/01/2007",
+             "Árbitro":"Daudén Ibáñez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-2 Maxi López (Minuto 89)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Adrián (Minuto 55); 0-2 Taborda (Minuto 63)",
+             "Ronda":"Octavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Deportivo de La Coruña",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 17/01/2007",
+             "Árbitro":"Undiano Mallenco",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-1 Sergio (Minuto 67)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Janković (Minuto 23)",
+             "Ronda":"Octavos de final (vuelta)"
+          }
+       ]
+    },
+    {
+       "Temporada":"2009-10",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Valladolid",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Jueves 29/10/2009",
+             "Árbitro":"Iturralde González",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Arzo 2'; 2-1 Diego Costa (Minuto 78)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Martí (Minuto 72)",
+             "Ronda":"Dieciseisavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Valladolid",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 11/11/2009",
+             "Árbitro":"Mejuto González",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Keita (Minuto 39)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Dieciseisavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Rayo Vallecano",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Jueves 07/01/2010",
+             "Árbitro":"Pérez Lasa",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Míchel (Minuto 15); 2-1 Collantes (Minuto 42)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Julio Álvarez (Minuto 21)",
+             "Ronda":"Octavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Rayo Vallecano",
+             "Número de Goles Locales":"3",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Jueves 14/01/2010",
+             "Árbitro":"Estrada Fernández",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-1 Víctor Casadesús (Minuto 50); 2-1 Víctor Casadesús (Minuto 60); 3-1 Mario Suárez (Minuto 91)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Piti (Minuto 45)",
+             "Ronda":"Octavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Getafe",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Miércoles 20/01/2010",
+             "Árbitro":"Pérez Burrull",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-2 Chori Castro (Minuto 92)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Manu del Moral (Minuto 50); 0-2 Miku (Minuto 78)",
+             "Ronda":"Cuartos de final (ida)"
+          },
+          {
+             "Equipo Local":"Getafe",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Jueves 28/01/2010",
+             "Árbitro":"Mejuto González",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Aduriz (Minuto 45)",
+             "Ronda":"Cuartos de final (vuelta)"
+          }
+       ]
+    },
+    {
+       "Temporada":"2001-02",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Díter Zafra",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 10/10/2001",
+             "Árbitro":"Puentes Leira",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Paunović 5'",
+             "Ronda":"Treintaidosavos de Final"
+          },
+          {
+             "Equipo Local":"Ceuta",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 28/11/2001",
+             "Árbitro":"López Nieto",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos y una tanda de penaltis que terminó 4-5",
+             "Ronda":"Dieciseisavos de final"
+          },
+          {
+             "Equipo Local":"Córdoba",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Miércoles 12/12/2001",
+             "Árbitro":"Turienzo Álvarez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Platero (Minuto 22); 2-1 Lawal (Minuto 70)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Riera (Minuto 68)",
+             "Ronda":"Octavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Córdoba",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 19/12/2001",
+             "Árbitro":"Pérez Lasa",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Eto'o 8'",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Cámara (Minuto 56)",
+             "Ronda":"Octavos de final (vuelta)"
+          }
+       ]
+    },
+    {
+       "Temporada":"2008-09",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Málaga",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 29/10/2008",
+             "Árbitro":"Mateu Lahoz",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Cheli (Minuto 31)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Keita (Minuto 47)",
+             "Ronda":"Dieciseisavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Málaga",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Miércoles 12/11/2008",
+             "Árbitro":"Megía Dávila",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 David Navarro (Minuto 33); 2-0 Keita (Minuto 92)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Dieciseisavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Almería",
+             "Número de Goles Locales":"3",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Jueves 08/01/2009",
+             "Árbitro":"Rubinos Pérez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Keita 8'; 2-1 Cléber Santana (Minuto 43); 3-1 Varela (Minuto 56)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Ortiz (Minuto 10)",
+             "Ronda":"Octavos de final (ida)"
+          },
+          {
+             "Equipo Local":"Almería",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 14/01/2009",
+             "Árbitro":"Teixeira Vitienes",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Piatti 3'",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Arango (Minuto 28)",
+             "Ronda":"Octavos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Betis",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Victoria",
+             "Campo":"",
+             "Fecha":"Jueves 22/01/2009",
+             "Árbitro":"Álvarez Izquierdo",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Keita (Minuto 64)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Cuartos de final (ida)"
+          },
+          {
+             "Equipo Local":"Betis",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 28/01/2009",
+             "Árbitro":"Pérez Lasa",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Cuartos de final (vuelta)"
+          },
+          {
+             "Equipo Local":"Barcelona",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Derrota",
+             "Campo":"",
+             "Fecha":"Jueves 05/02/2009",
+             "Árbitro":"Muñiz Fernández",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Henry (Minuto 34); 2-0 Márquez (Minuto 73)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Semifinal (ida)"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Barcelona",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"",
+             "Fecha":"Miércoles 04/03/2009",
+             "Árbitro":"Rubinos Pérez",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Chori Castro (Minuto 44)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 1-1 Messi (Minuto 81)",
+             "Ronda":"Semifinal (vuelta)"
+          }
+       ]
+    },
+    {
+       "Temporada":"2020-21",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Guijuelo",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"Estadio Municipal Luis Ramos",
+             "Fecha":"Miércoles 16/12/2020",
+             "Árbitro":"Hernández Maeso",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Abdón Prats (Minuto 73)",
+             "Ronda":"Ronda 1"
+          },
+          {
+             "Equipo Local":"Fuenlabrada",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"2",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Empate",
+             "Campo":"Estadio Fernando Torres",
+             "Fecha":"Miércoles 06/01/2021",
+             "Árbitro":"Milla Alvendiz",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-1 Diéguez (Minuto 54); 2-1 Fran González (Minuto 99) (Propia Puerta)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Trajkovski (Minuto 11); 2-2 Abdón Prats (Minuto 114)",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos y una tanda de penaltis que terminó 7-6",
+             "Ronda":"Ronda 2"
+          }
+       ]
+    },
+    {
+       "Temporada":"2023-24",
+       "Equipo":"Mallorca",
+       "Partidos":[
+          {
+             "Equipo Local":"Boiro",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"4",
+             "Resultado":"Victoria",
+             "Campo":"Municipal da Barraña (Boiro)",
+             "Fecha":"Miércoles 01/11/2023 (18:30)",
+             "Árbitro":"Alberola Rojas",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Abdón Prats (Minuto 25); 0-2 Abdón Prats (Minuto 33) (Penalti); 0-3 Larin (Minuto 46); 0-4 Abdón Prats (Minuto 75) (Penalti)",
+             "Ronda":"Ronda 1"
+          },
+          {
+             "Equipo Local":"Valle de Egüés",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"3",
+             "Resultado":"Victoria",
+             "Campo":"Sarriguren",
+             "Fecha":"Miércoles 06/12/2023 (19:00)",
+             "Árbitro":"De Burgos Bengoetxea",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Dani Rodríguez (Minuto 39); 0-2 Llabrés (Minuto 56); 0-3 Llabrés (Minuto 62)",
+             "Ronda":"Ronda 2"
+          },
+          {
+             "Equipo Local":"Burgos CF",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"3",
+             "Resultado":"Victoria",
+             "Campo":"El Plantío (Burgos)",
+             "Fecha":"Domingo 07/01/2024 (12:00)",
+             "Árbitro":"Díaz de Mera",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Gio González (Minuto 62); 0-2 Larin (Minuto 74); 0-3 Abdón Prats (Minuto 81)",
+             "Ronda":"Dieciseisavos de final"
+          },
+          {
+             "Equipo Local":"Tenerife",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Victoria",
+             "Campo":"Heliodoro Rodríguez López (Santa Cruz de Tenerife)",
+             "Fecha":"Martes 16/01/2024 (21:00)",
+             "Árbitro":"Melero López",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Larin (Minuto 120)",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos",
+             "Ronda":"Octavos de final"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Girona",
+             "Número de Goles Locales":"3",
+             "Número de Goles Visitante":"2",
+             "Resultado":"Victoria",
+             "Campo":"Son Moix (Palma de Mallorca)",
+             "Fecha":"Miércoles 24/01/2024 (19:30)",
+             "Árbitro":"Munuera Montero",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-0 Larin (Minuto 21); 2-0 Abdón Prats (Minuto 28); 3-0 Abdón Prats (Minuto 35) (Penalti)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 3-1 Stuani (Minuto 68) (Penalti); 3-2 Sávio (Minuto 90)",
+             "Ronda":"Cuartos de final"
+          },
+          {
+             "Equipo Local":"Mallorca",
+             "Equipo Visitante":"Real Sociedad",
+             "Número de Goles Locales":"0",
+             "Número de Goles Visitante":"0",
+             "Resultado":"Empate",
+             "Campo":"Son Moix (Palma de Mallorca)",
+             "Fecha":"Martes 06/02/2024 (21:00)",
+             "Árbitro":"Muñiz Ruiz",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': No hubo goles del equipo local",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': No hubo goles del equipo visitante",
+             "Ronda":"Semifinal (ida)"
+          },
+          {
+             "Equipo Local":"Real Sociedad",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"Anoeta (San Sebastián-Donostia)",
+             "Fecha":"Martes 27/02/2024 (21:30)",
+             "Árbitro":"Gil Manzano",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-1 Oyarzabal (Minuto 71)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Gio González (Minuto 50)",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos y una tanda de penaltis que terminó 4-5",
+             "Ronda":"Semifinal (vuelta)"
+          },
+          {
+             "Equipo Local":"Athletic Club",
+             "Equipo Visitante":"Mallorca",
+             "Número de Goles Locales":"1",
+             "Número de Goles Visitante":"1",
+             "Resultado":"Empate",
+             "Campo":"La Cartuja (Sevilla)",
+             "Fecha":"Sábado 06/04/2024 (22:00)",
+             "Árbitro":"Munuera Montero",
+             "Detalles Goles Locales":"Los goles descritos vienen separados por ';': 1-1 Sancet (Minuto 50)",
+             "Detalles Goles Visitante":"Los goles descritos vienen separados por ';': 0-1 Dani Rodríguez (Minuto 20)",
+             "Información adicional":"En este partido se disputó una prórroga de 30 minutos y una tanda de penaltis que terminó 4-2",
+             "Ronda":"Final"
+          }
+       ]
     }
-]
+ ]
