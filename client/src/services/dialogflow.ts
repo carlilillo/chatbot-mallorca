@@ -89,7 +89,7 @@ export default async function fetchModelResponse(
         setInput.sendLastInput = false
     }
 
-    const url = import.meta.env.VITE_BACKEND_ENDPOINT_PRE!
+    const url = import.meta.env.VITE_BACKEND_ENDPOINT!
 
     const res = await fetch(`${url}/api/dialogflow` ,
     {
